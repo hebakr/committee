@@ -1,0 +1,50 @@
+﻿<h2>أماكن العمل</h2>
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>مكان العمل</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" class="form-control input-lg"  name="name" ng-model="vm.newItem" value="" placeholder="أدخل مكان العمل..." /></td>
+            <td>
+                <button class="btn btn-success btn-block btn-lg " ng-click="vm.save()">
+                    <i class="fa fa-save fa-lg"></i>
+                </button>
+            </td>
+        </tr>
+        <tr ng-repeat="sector in vm.data">
+            <td>
+                <div ng-hide="vm.currentEdit[sector.id]">{{sector.title}}</div>
+                <div ng-show="vm.currentEdit[sector.id]">
+                    <input type="text" class="form-control" ng-model="vm.itemToEdit.title" />
+                </div>
+
+            </td>
+            <td class="actions">
+                <span ng-hide="vm.currentEdit[sector.id]">
+                    <button class="btn btn-default" ng-click="vm.edit(sector)">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger" ng-click="vm.delete(sector)">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+
+                </span>
+                <span ng-show="vm.currentEdit[sector.id]">
+                    <button class="btn btn-default" ng-click="vm.update(sector)">
+                        <i class="fa fa-check"></i>
+                    </button>
+                    <button class="btn btn-primary" ng-click="vm.cancelEdit(sector.id)">
+                        <i class="fa fa-mail-reply"></i>
+                    </button>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

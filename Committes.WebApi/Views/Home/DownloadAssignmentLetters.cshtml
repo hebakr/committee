@@ -1,0 +1,79 @@
+﻿@model Committes.Models.Committee
+@{ var firstItem = true;}
+
+    @foreach (var item in Model.Inspectors)
+    {
+        if (firstItem)
+        {
+            firstItem = false;
+        }
+        else
+        {
+            <div style="break-after: always; page-break-after: always"></div>
+
+        }
+        @Html.Partial("_Letter", item);
+    }
+
+@foreach (var item in Model.Assistances)
+{
+    if (firstItem)
+    {
+        firstItem = false;
+    }
+    else
+    {
+        <div style="break-after: always; page-break-after: always"></div>
+
+    }
+    @Html.Partial("_Letter", item);
+}
+
+@foreach (var item in Model.Observers)
+{
+    if (firstItem)
+    {
+        firstItem = false;
+    }
+    else
+    {
+        <div style="break-after: always; page-break-after: always"></div>
+
+    }
+    @Html.Partial("_Letter", item);
+}
+@foreach (var item in Model.Examinors)
+{
+    if (firstItem)
+    {
+        firstItem = false;
+    }
+    else
+    {
+        <div style="break-after: always; page-break-after: always"></div>
+
+    }
+    @Html.Partial("_Letter", item);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.print();
+</script>
+
+
+
+
+

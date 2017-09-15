@@ -1,0 +1,413 @@
+﻿<div class="wrapper">
+    <div  class="btn-group pull-left " uib-dropdown keyboard-nav>
+        <button class="btn btn-primary" id="simple-btn-keyboard-nav" type="button" uib-dropdown-toggle>
+            التقارير
+            <i class="fa fa-print fa-lg"></i>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li>
+                <a href="/home/ComitteeStructure/{{vm.model.id}}" target="print_frame2" class="">
+                    <i class="fa fa-print"></i> طباعة تشكيل اللجنة
+                </a>
+            </li>
+            <li>
+                <a href="/home/DownloadAssignmentLetters/{{vm.model.id}}" target="print_frame2" class="">
+                    <i class="fa fa-print"></i> طباعة خطابات التكليف
+                </a>
+            </li>
+            <!--<li>
+
+                <strong>إستخراج فى ملف وورد</strong>
+            </li>
+            <li><a href="/home/ComitteeStructure/{{vm.model.id}}?format=msword&part=1"><i class="fa fa-arrow-circle-left"></i> الإدارة</a></li>
+            <li><a href="/home/ComitteeStructure/{{vm.model.id}}?format=msword&part=2"><i class="fa fa-arrow-circle-left"></i> النظرى</a></li>
+            <li><a href="/home/ComitteeStructure/{{vm.model.id}}?format=msword&part=3"><i class="fa fa-arrow-circle-left"></i> العملى</a></li>-->
+        </ul>
+    </div>
+
+    <h2>{{vm.model.name }}</h2>
+    <hr class="clearfix" />
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>القطاع</label>
+
+                        <div>
+                            {{vm.model.sector}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>المحافظة</label>
+                        <div>
+                            {{vm.model.governrate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>الإدارة التعليمية</label>
+                        <div>
+                            {{vm.model.learningManagement}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>اللجنة</label>
+                        <div>
+                            {{vm.model.name}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>رقم اللجنة</label>
+                        <div>
+                            {{vm.model.number}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>عدد الطلبة</label>
+                        <div>
+                            {{vm.model.studentCount}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">رئيس اللجنة</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>الإسم</label>
+                        <div>
+                            {{vm.model.chief.name}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>الوظيفة</label>
+                        <div>
+                            {{vm.model.chief.job}}
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ الإستلام</label>
+                        <div>
+                            {{vm.model.chiefStartDate | date: 'yyyy-MM-dd'}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ التسليم</label>
+                        <div>
+                            {{vm.model.chiefEndDate | date: 'yyyy-MM-dd'    }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>مكان العمل الأساسى</label>
+                        <div>
+                            {{vm.model.chief.workPlace.title}}
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ تقدير الدرجات</label>
+                        <div>
+                            {{vm.model.chief.evaluationDate}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">المراقب الأول</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>الإسم</label>
+                        <div>
+                            {{vm.model.superInspector.name}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>الوظيفة</label>
+                        <div>
+                            {{vm.model.superInspector.job}}
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ الإستلام</label>
+                        <div>
+                            {{vm.model.superInspectorStartDate | date: 'yyyy-MM-dd'}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ التسليم</label>
+                        <div>
+                            {{vm.model.superInspectorEndDate | date: 'yyyy-MM-dd'}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>مكان العمل الأساسى</label>
+                        <div>
+                            {{vm.model.superInspector.workPlace.title}}
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>تاريخ تقدير الدرجات</label>
+                        <div>
+                            {{vm.model.superInspector.evaluationDate}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">طبيب اللجنة</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>الإسم</label>
+                        <div>{{vm.model.doctorName}}</div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>تاريخ العمل</label>
+                        <div>{{vm.model.doctorStartDate}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">المراقبون</div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>مسلسل</th>
+                    <th>الإسم</th>
+                    <th>الوظيفة</th>
+                    <th>تاريخ الإستلام</th>
+                    <th>تاريخ الإجتماع برئيس اللجنة</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="ex in vm.model.inspectors">
+                    <td>{{$index+1}}</td>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.job}}</td>
+                    <td>{{ex.startDate}}</td>
+                    <td>{{ex.meetingDate}}</td>
+                    <td class="actions">
+                        <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{ex.id}}" target="print_frame2">
+                            <i class="fa fa-print"></i>
+                        </a>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">المعاونون</div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>مسلسل</th>
+                    <th>الإسم</th>
+                    <th>الوظيفة</th>
+                    <th>تاريخ الإستلام</th>
+                    <th>تاريخ الإجتماع برئيس اللجنة</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="ex in vm.model.assistances">
+                    <td>{{$index+1}}</td>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.job}}</td>
+                    <td>{{ex.startDate}}</td>
+                    <td>{{ex.meetingDate}}</td>
+                    <td class="actions">
+                        <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{ex.id}}" target="print_frame2">
+                            <i class="fa fa-print"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">ملاحظون التحريرى</div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>مسلسل</th>
+                    <th>الإسم</th>
+                    <th>الوظيفة</th>
+                    <th>تاريخ الإستلام</th>
+                    <th>تاريخ الإجتماع برئيس اللجنة</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="ex in vm.model.observers">
+                    <td>{{$index+1}}</td>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.job}}</td>
+                    <td>{{ex.startDate}}</td>
+                    <td>{{ex.meetingDate}}</td>
+                    <td class="actions">
+                        <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{ex.id}}" target="print_frame2">
+                            <i class="fa fa-print"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">أعضاء اللجنة</div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>مسلسل</th>
+                    <th>الإسم</th>
+                    <th>الوظيفة</th>
+                    <th>تاريخ الإستلام</th>
+                    <th>تاريخ التسليم</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="ex in vm.model.theoroticalMembers">
+                    <td>{{$index+1}}</td>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.job}}</td>
+                    <td>{{ex.startDate}}</td>
+                    <td>{{ex.endDate}}</td>
+                    <td class="actions">
+                        <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{ex.id}}" target="print_frame2">
+                            <i class="fa fa-print"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">أعضاء اللجنة (العملى)</div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>مسلسل</th>
+                    <th>الإسم</th>
+                    <th>الوظيفة</th>
+                    <th>تاريخ الإستلام</th>
+                    <th>تاريخ التسليم</th>
+                    <th></th>
+                </tr>
+                <tbody ng-repeat="lab in vm.model.labs">
+                    <tr style="background-color: #eee; font-size: larger">
+                        <th colspan="6" class="text-center">{{lab.title}} (عدد الطلبة: {{lab.studentCount}} - الدفعات: 4+4)</th>
+                    </tr>
+                    <tr ng-repeat="m in lab.members">
+                        <td>{{$index+1}}</td>
+                        <td>{{m.name}}</td>
+                        <td>{{m.job}}</td>
+                        <td>{{m.startDate}}</td>
+                        <td>{{m.endDate}}</td>
+                        <td class="actions">
+                            <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{m.id}}" target="print_frame2">
+                                <i class="fa fa-print"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tbody ng-repeat="div in vm.model.divisions">
+                    <tr style="background-color: #eee; font-size: larger">
+                        <th colspan="6" class="text-center">{{div.title}} (عدد الطلبة: {{div.studentCount}} - الدفعات: 4+4)</th>
+                    </tr>
+                    <tr ng-repeat="m in div.members">
+                        <td>{{$index+1}}</td>
+                        <td>{{m.name}}</td>
+                        <td>{{m.job}}</td>
+                        <td>{{m.startDate}}</td>
+                        <td>{{m.endDate}}</td>
+                        <td class="actions">
+                            <a class="btn btn-default btn-print" title="خطاب التكليف" href="/home/DownloadAssignmentLetterForMember?member={{m.id}}" target="print_frame2">
+                                <i class="fa fa-print"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+<iframe src="" id="print_frame" name="print_frame2" width="0" height="0" frameborder="0"></iframe>

@@ -1,0 +1,173 @@
+﻿<h2>القطاعات</h2>
+<hr />
+
+<ul class="list-unstyled sectors">
+
+    <li ng-repeat="s in vm.data">
+
+        <div ng-hide="vm.currentEdit[s.id]">
+            <a ng-click="s.collapsed = !s.collapsed" class="btn btn-default btn-xs"><i class="fa fa-plus" ng-class="{'fa-minus': s.collapsed}"></i></a> {{s.title}}
+            <span ng-hide="vm.currentEdit[s.id]" class="pull-left">
+                <button class="btn btn-default btn-sm" ng-click="vm.edit(s)">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button class="btn btn-danger btn-sm" ng-click="vm.delete(s)">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+
+            </span>
+        </div>
+        <div ng-show="vm.currentEdit[s.id]" class="form-inline">
+
+            <input type="text" style="width: 50%" class="form-control" ng-model="vm.itemToEdit.title" />
+            <span class="pull-left">
+                <button class="btn btn-default btn-sm" ng-click="vm.update(s)">
+                        <i class="fa fa-check"></i>
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="vm.cancelEdit(s.id)">
+                    <i class="fa fa-mail-reply"></i>
+                </button>
+            </span>
+        </div>
+
+
+        <ul class="list-unstyled" ng-show="s.collapsed">
+            <li ng-repeat="g in s.governrates"> 
+
+                <div ng-hide="vm.currentGovEdit[g.id]">
+                    <a ng-click="g.collapsed = !g.collapsed" class="btn btn-default btn-xs"><i class="fa fa-plus" ng-class="{'fa-minus': g.collapsed}"></i></a> {{g.title}}
+                    <span ng-hide="vm.currentGovEdit[s.id]" class="pull-left">
+                        <button class="btn btn-default btn-sm" ng-click="vm.editGov(g)">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" ng-click="vm.deleteGov(g, s)">
+                            <i class="fa fa-trash-o"></i>
+                        </button>
+
+                    </span>
+                </div>
+                <div ng-show="vm.currentGovEdit[g.id]" class="form-inline">
+
+                    <input type="text" style="width: 50%" class="form-control" ng-model="vm.govToEdit.title" />
+                    <span class="pull-left">
+                        <button class="btn btn-default btn-sm" ng-click="vm.updateGov(g)">
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <button class="btn btn-primary  btn-sm" ng-click="vm.cancelGovEdit(g.id)">
+                            <i class="fa fa-mail-reply"></i>
+                        </button>
+                    </span>
+                </div>
+
+                <ul class="list-unstyled" ng-show="g.collapsed">
+                    <li ng-repeat="lm in g.learningManagements">
+                        <div ng-hide="vm.currentLMEdit[lm.id]">
+                            <a ng-click="lm.collapsed = !lm.collapsed" class="btn btn-default btn-xs"><i class="fa fa-plus" ng-class="{'fa-minus': lm.collapsed}"></i></a>{{lm.title}}
+                            <span ng-hide="vm.currentLMEdit[lm.id]" class="pull-left">
+                                <button class="btn btn-default btn-sm" ng-click="vm.editLM(lm)">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" ng-click="vm.deleteLM(lm, g)">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+
+                            </span>
+                        </div>
+                        <div ng-show="vm.currentLMEdit[lm.id]" class="form-inline">
+
+                            <input type="text" style="width: 50%" class="form-control" ng-model="vm.lmToEdit.title" />
+                            <span class="pull-left">
+                                <button class="btn btn-default btn-sm" ng-click="vm.updateLM(lm)">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                                <button class="btn btn-primary  btn-sm" ng-click="vm.cancelLMEdit(lm.id)">
+                                    <i class="fa fa-mail-reply"></i>
+                                </button>
+                            </span>
+                        </div>
+
+                        <ul class="list-unstyled" ng-show="lm.collapsed">
+                            <li ng-repeat="school in lm.schools">
+                                <div ng-hide="vm.currentSchoolEdit[school.id]">
+                                    {{school.title}}
+                                    <span ng-hide="vm.currentSchoolEdit[school.id]" class="pull-left">
+                                        <button class="btn btn-default btn-sm" ng-click="vm.editSchool(school)">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-sm" ng-click="vm.deleteSchool(school, lm)">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+
+                                    </span>
+                                </div>
+                                <div ng-show="vm.currentSchoolEdit[school.id]" class="form-inline">
+
+                                    <input type="text" style="width: 50%" class="form-control" ng-model="vm.schoolToEdit.title" />
+                                    <span class="pull-left">
+                                        <button class="btn btn-default btn-sm" ng-click="vm.updateSchool(school)">
+                                            <i class="fa fa-check"></i>
+                                        </button>
+                                        <button class="btn btn-primary  btn-sm" ng-click="vm.cancelScholEdit(school.id)">
+                                            <i class="fa fa-mail-reply"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="form-group form-inline">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" ng-model="lm.newSchool" placeholder="أدخل المدرسة">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" ng-click="vm.addSchool(lm)">
+                                            <i class="fa fa-plus fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                    <li>
+                        <div class="form-group form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" ng-model="g.newLM" placeholder="أدخل الإدارة التعليمية">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" ng-click="vm.addLM(g)">
+                                    <i class="fa fa-plus fa-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="form-group form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="s.newGov" placeholder="أدخل المحافظة">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" ng-click="vm.addGovernrate(s)">
+                            <i class="fa fa-plus fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div class="form-group form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="vm.newSector" placeholder="أدخل القطاع">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" ng-disabled="!vm.newSector" ng-click="vm.addSector()">
+                    <i class="fa fa-plus fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </li>
+</ul>

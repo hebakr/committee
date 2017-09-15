@@ -1,0 +1,472 @@
+﻿@model Committes.WebApi.Models.CommitteeVM
+
+@{
+    Layout = null;
+    var index = 1;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/_assets/css/structure.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <table  class="wrapper page-breaker">
+        <thead>
+            <tr>
+                <td colspan="5" style="border: none;">
+                    <table class="header">
+                        <tr>
+                            <td class="width25" style="text-align:center; font-weight: 700">
+                                <p>
+                                    وزارة التربية و التعليم والتعليم الفني<br />
+                                    الادارة العامة للامتحانات<br />
+                                    لجنة الإدارة لامتحان  دبلوم
+                                    المدارس الثانوية الصناعية
+                                    نظام السنوات الثلاث
+                                    قطاع القاهرة
+                                    سنة 2016
+                                </p>
+                            </td>
+                            <td>
+                                <div style="font-weight: 600; text-align: center; font-size: 14px;">
+                                    كشف
+                                    أسماء السادة أعضاء لجنة سير الامتحان
+                                </div>
+                                <table class="inner">
+                                    <tr>
+                                        <th>الدور</th>
+                                        <td>@Model.Term</td>
+                                    </tr>
+                                    <tr>
+                                        <th>أسم اللجنة </th>
+                                        <td>@Model.Name</td>
+                                    </tr>
+                                    <tr>
+                                        <th>مديرية / إدارة </th>
+                                        <td>@Model.LearningManagement</td>
+                                    </tr>
+                                    <tr>
+                                        <th>عنــوان اللجنة   </th>
+                                        <td>@Model.Address</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="width25">
+                                <div style="text-align: left">( استمارة رقم  13 " د ")</div>
+                                <table class="inner">
+                                    <tr>
+                                        <th>رقم اللجنة </th>
+                                        <td>@Model.Number</td>
+                                    </tr>
+                                    <tr>
+                                        <th>نوع اللجنة </th>
+                                        <td>@Model.CommitteType</td>
+                                    </tr>
+                                    <tr>
+                                        <th>عدد الطلبة  </th>
+                                        <td>@Model.StudentCount</td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr class="table-head">
+                <th class="center-txt">م</th>
+                <th class="name">الأســــــــــم</th>
+                <th class="job">الوظيفة الأصليه</th>
+                <th colspan="2" class=" width25 center-txt">ملاحظات  </th>
+            </tr>
+        </thead>
+
+        <tbody class="list">
+            <tr>
+                <td rowspan="2" class="txt-center">1</td>
+                <td class="graybg">
+                    <label>
+                        رئيس اللجنة
+                    </label>
+                   
+                </td>
+                <td>
+                    @Model.Chief.Name <br/>
+                    @Model.Chief.Job
+                    - @Model.Chief.Speciality
+                </td>
+                <td rowspan="2" class="exam-date">
+                    <div>
+                        استلام وامتحان<br />
+                        @if (Model.ChiefStartDate.HasValue)
+                        {
+                            @Model.ChiefStartDate.Value.ToString("yyy/MM/dd")
+                        }
+                    </div>
+                    <div>
+                        تسليم: <br />
+                        @if (Model.ChiefEndDate.HasValue)
+                        {
+                            @Model.ChiefEndDate.Value.ToString("yyy/MM/dd")
+                        }
+                    </div>
+
+                </td>
+                <td rowspan="2">
+                    تقدير درجات
+                    @Model.Chief.EvaluationDate
+                </td>
+            </tr>
+            <tr>
+                <td class="graybg">
+                    <label>
+                        المراقب الأول
+                    </label>
+                    
+                </td>
+                <td>
+                    @Model.SuperInspector.Name <br/>
+                    @Model.SuperInspector.Job
+                    - @Model.Chief.Speciality
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="graybg">المراقبــــــون:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (var item in Model.Inspectors)
+            {
+                <tr>
+                    <td class="txt-center">@(index++)</td>
+                    <td>@item.Name</td>
+                    <td>
+                        @item.Job
+                        @item.Speciality 
+                        @item.School.Title 
+                        <span style="float: left; margin-right: 5px;">
+                            @item.CommitteRole
+                        </span>
+                        
+                    </td>
+                    <td>
+                        @item.StartDate
+                    </td>
+                    <td>
+                        @item.EvaluationDate
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td class="graybg">المعاونـــــون:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @{ index = 1; }
+            @foreach (var item in Model.Assistances)
+            {
+                <tr>
+                    <td class="txt-center">@(index++)</td>
+                    <td>@item.Name</td>
+                    <td>
+                        @item.Job
+                        @item.Speciality
+                        @item.School.Title
+                        <span style="float: left; margin-right: 5px;">
+                            @item.CommitteRole
+                        </span>
+
+                    </td>
+                    <td>
+                        @item.StartDate
+                    </td>
+                    <td>
+                        @item.EvaluationDate
+                    </td>
+                </tr>
+            }
+
+            <tr>
+                <td></td>
+                <td class="graybg">الطبيب:</td>
+                <td>@Model.DoctorName</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="border: none;">
+                    <table class="footer" style="width: 100%">
+                        <tr>
+                            <td>
+                                كتبه:  <br />
+                                أملاه: <br />
+                            </td>
+                            <td>
+                                راجع الكتابة:  <br />
+                                راجع الإملاء: <br />
+
+                            </td>
+                            <td style="text-align: left">
+                                رئيس اللجنة:<br />
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <table class="page-breaker wrapper">
+        <thead>
+            <tr>
+                <td colspan="6">
+                    <div style="text-align: left">( استمارة رقم 14 " د " ) </div>
+                    <h2 class="txt-center">
+                        أسماء السادة أعضاء لجنة @Model.Name رقم (@Model.Number)
+                    </h2>
+                    <p style="text-align: right;">
+                        الدور @Model.Term @Model.SchoolYear
+                    </p>
+
+                </td>
+            </tr>
+            <tr class="table-head">
+                <th>م</th>
+                <th>الأســــــــــم</th>
+                <th colspan="2" >الوظيفة الأصليه</th>
+                <th colspan="2">ملاحظات  </th>
+            </tr>
+            <tr class="table-head2">
+                <td></td>
+                <td></td>
+                <td style="width: 200px;">
+                    <span >عدد الطلبة</span>
+                </td>
+                <td style="width: 50px;">
+                    <span>دفعات</span>
+                </td>
+                <td style="width: 150px;">
+
+                   امتحان
+                </td>
+                <td style="width: 50px;">
+                    تقدير درجات
+                </td>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @foreach (var item in Model.Labs)
+            {
+            <tr>
+                <td></td>
+                <td class="graybg">@item.Title:</td>
+                <td>
+                    <span style="float: right">@item.StudentCount</span>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                index = 1;
+                foreach (var member in item.Members)
+                {
+            <tr>
+                <td class="txt-center">@(index++)</td>
+                <td>
+                    @member.Name
+                </td>
+                <td>
+
+                    @member.Job
+                    @member.Speciality
+                    @member.School.Title
+                </td>
+                <td>
+                    <span style="">
+                        @member.CommitteRole
+                    </span>
+                </td>
+                <td>
+                    <span style="">@member.StartDate</span>
+                </td>
+                <td>
+                    <span style="">@member.EvaluationDate</span>
+
+                </td>
+            </tr>
+                }
+            }
+
+        </tbody>
+        <tbody class="list">
+            @foreach (var item in Model.Divisions)
+            {
+            <tr>
+                <td></td>
+                <td class="graybg">@item.Title:</td>
+                <td>
+                    <span style="float: right">@item.StudentCount</span>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+           </tr>
+                index = 1;
+                foreach (var member in item.Members)
+                {
+            <tr>
+                <td class="txt-center">@(index++)</td>
+                <td>
+                    @member.Name
+                </td>
+                <td>
+                   
+                    @member.Job
+                    @member.Speciality
+                    @member.School.Title
+                </td>
+                <td>
+                    <span style="">
+                        @member.CommitteRole
+                </span>
+            </td>
+                <td>
+                    <span style="">@member.StartDate</span>
+                </td>
+                <td>
+                    <span style="">@member.EvaluationDate</span>
+
+                </td>
+            </tr>
+                }
+            }
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="6" style="border: none;">
+                    <table class="footer" style="width: 100%">
+                        <tr>
+                            <td>
+                                كتبه:  <br />
+                                أملاه: <br />
+                            </td>
+                            <td>
+                                راجع الكتابة:  <br />
+                                راجع الإملاء: <br />
+
+                            </td>
+                            <td style="text-align: left">
+                                رئيس اللجنة:<br />
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+
+    <table class="page-breaker wrapper">
+        <thead>
+            <tr>
+                <td colspan="4">
+                    <div style="text-align: left">( استمارة رقم 14 " د " ) </div>
+                    <h2 class="txt-center">
+                        أسماء السادة أعضاء لجنة @Model.Name رقم (@Model.Number)
+                    </h2>
+                    <p style="text-align: right;">
+                        الدور @Model.Term @Model.SchoolYear
+                    </p>
+
+                </td>
+            </tr>
+            <tr class="table-head">
+                <th>م</th>
+                <th>الأســـم</th>
+                <th>الوظيفة</th>
+                <th class="width25">ملاحظات  </th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @{ index = 1;}
+            @foreach (var member in Model.TheoroticalMembers)
+            {
+                <tr>
+                    <td class="txt-center">@(index++)</td>
+                    <td>
+                        @member.Name
+                    </td>
+                    <td>
+                        @member.Job
+                    </td>
+                    <td>
+                        @member.TheoroticalDate
+                    </td>
+                </tr>
+            }
+            @foreach (var item in Model.Observers)
+            {
+                <tr>
+                    <td class="txt-center">@(index++)</td>
+                    <td>@item.Name</td>
+                    <td>@item.Job</td>
+                    <td>@item.StartDate</td>
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" style="border: none;">
+                    <table class="footer" style="width: 100%">
+                        <tr>
+                            <td>
+                                كتبه:  <br />
+                                أملاه: <br />
+                            </td>
+                            <td>
+                                راجع الكتابة:  <br />
+                                راجع الإملاء: <br />
+
+                            </td>
+                            <td style="text-align: left">
+                                رئيس اللجنة:<br />
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </tfoot>
+   </table>
+
+
+
+            <script>
+                window.print();
+            </script>
+
+</body>
+</html>
+    

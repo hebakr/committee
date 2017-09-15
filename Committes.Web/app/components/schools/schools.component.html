@@ -1,0 +1,70 @@
+﻿<h2>أسماء مقار  اللجان</h2>
+<hr />
+<div class="panel panel-danger">
+    <div class="panel-body">
+        <table class="search-bar">
+            <tr>
+                <td>
+                    <input type="text" class="form-control" ng-model="vm.model.committeeNumber" value="" placeholder="رقم اللجنة" />
+                </td>
+                <td>
+                    <select class="form-control" ng-model="vm.model.selectedSector"
+                            ng-options="option.title for option in vm.sectors track by option.id">
+                        <option value="">---أختر القطاع---</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-control" ng-model="vm.model.selectedGov"
+                            ng-options="option.title for option in vm.model.selectedSector.governrates  track by option.id">
+                        <option value="">---أختر المحافظة---</option>
+                    </select>
+                </td>
+                <td class="actions">
+                    <button class="btn btn-default btn-block" ng-click="vm.search()" >
+                        <i class="fa fa-search"></i>
+                        بحث
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<p class="clearfix">
+    <a class="btn btn-success pull-left" ng-click="vm.openDialog()">
+        <i class="fa fa-plus"></i>
+        إضافة مقر جديد
+    </a>
+
+</p>
+
+<div class="alert alert-info text-center" ng-show="vm.data.length == 0 && vm.search">
+    لا توجد بيانات للعرض
+</div>
+
+<table class="table" ng-show="vm.data.length > 0">
+    <tr>
+        <th>الرقم</th>
+        <th>الإسم</th>
+        <th>المحافظة</th>
+        <th>الإدارة التعليمية</th>
+        <th>رقم التليفون</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="school in vm.data">
+        <td>{{school.number}}</td>
+        <td>{{school.name}}</td>
+        <td>{{school.learningManagement.governrate.title}}</td>
+        <td>{{school.learningManagement.title}}</td>
+        <td>{{school.phone}}</td>
+        <td class="actions">
+            <button class="btn btn-default" ng-click="vm.openDialogForEdit(school)">
+                <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" ng-click="vm.delete(school)">
+                <i class="fa fa-trash-o"></i>
+            </button>
+
+        </td>
+    </tr>
+</table>

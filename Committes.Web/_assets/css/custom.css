@@ -1,0 +1,95 @@
+﻿@font-face {
+    font-family: "JF Flat Regular";
+    src: url('fonts/JF-Flat-regular.eot');
+    src: url('fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+    url('fonts/JF-Flat-regular.woff') format('woff'),
+    url('fonts/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'JF Flat Regular', Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'JF Flat Regular', Tahoma, sans-serif;
+
+}
+
+td.actions {
+    width: 1px;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+.input-lg {
+    padding: 10px 16px;
+}
+
+.form-control {
+    padding: 5px 12px;
+}
+
+.tab-pane {
+    padding: 20px 20px;
+}
+
+.tab-content {
+    border: 1px solid lightgray;
+    border-top: none;
+    margin-right: -1px;
+}
+
+.loading-data {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    z-index: 150;
+}
+
+ul.sectors {
+    padding: 5px;
+}
+ul.sectors ul {
+    margin-right: 28px;
+}
+
+ul.sectors li {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: solid 1px silver;
+    padding-bottom: 15px;
+
+}
+
+ul.sectors li:last-child{
+    border-bottom: none;
+} 
+
+ul.sectors ul li {
+    font-size: 16px;
+}
+ul.sectors ul ul li {
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+
+ul.sectors .form-group:first-child { width: 60%;}
+ul.sectors .form-group:first-child input.form-control { width: 100% }
+
+.labs-sections div.col-md-6, .labs-sections div.col-md-5, .labs-sections div.col-md-1 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.search-bar { width: 100%;}
+.search-bar td { padding: 5px;}

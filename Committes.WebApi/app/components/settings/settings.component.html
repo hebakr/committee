@@ -1,0 +1,42 @@
+﻿<h2>الإعدادات</h2>
+<hr />
+
+<div uib-alert class="alert-success" ng-show="vm.dataSaved" close="vm.dataSaved = false">
+    <i class="fa fa-info-circle"></i>
+    تم حفظ الإعدادات بنجاح
+</div>
+<div uib-alert class="alert-success" ng-show="vm.dataReordered" close="vm.dataReordered = false">
+    <i class="fa fa-info-circle"></i>
+    تم إعادة ترقيم اللجان بنجاح
+</div>
+
+<form>
+    <div class="form-group">
+        <label>بداية ترقيم اللجان</label>
+        <input type="number" ng-model="vm.data.committeStartNumber" class="form-control" placeholder="بداية ترقيم اللجان" />
+    </div>
+
+    <div class="form-group">
+        <label>العام الدراسى</label>
+        <input type="text" ng-model="vm.data.currentSchoolYear" class="form-control" placeholder="العام الدراسى" />
+    </div>
+
+    <div class="form-group">
+        <label>الدور</label>
+        <input type="text" ng-model="vm.data.currentTerm" class="form-control" placeholder="الفصل الدراسى" />
+    </div>
+    <p>
+        <button class="btn btn-primary" ng-click="vm.save()">
+            <i class="fa fa-save"></i>
+            حفظ الإعدادات
+        </button>
+        <button class="btn btn-default" ng-click="vm.reorder()">
+            <i class="fa fa-recycle"></i>
+
+            إعادة ترقيم اللجان
+
+        </button>
+
+    </p>
+</form>
+

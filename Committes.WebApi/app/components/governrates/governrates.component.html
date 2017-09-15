@@ -1,0 +1,61 @@
+﻿<h2>المحافظات</h2>
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>المحافظة</th>
+            <th> القطاع</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" class="form-control input-lg" name="name" ng-model="vm.newSector" value="" placeholder="أدخل اسم المحافظة..." /></td>
+            <td>
+                <select class="form-control input-lg">
+                    <option value="">أختر القطاع</option> 
+                    <option>قطاع 1</option>
+                    <option>قطاع 2</option>
+                    <option>قطاع 3</option>
+                </select>
+            </td>
+            <td>
+                <button class="btn btn-success btn-block btn-lg " ng-click="vm.save()">
+                    <i class="fa fa-save fa-lg"></i>
+                </button>
+            </td>
+        </tr>
+        <tr ng-repeat="item in vm.data">
+            <td>
+                <div ng-hide="vm.currentEdit[item.id]">{{item.name}}</div>
+                <div ng-show="vm.currentEdit[item.id]">
+                    <input type="text" class="form-control" ng-model="vm.itemToEdit.name" />
+                </div>
+
+            </td>
+            <td>
+                {{item.sectorName}}
+            </td>
+            <td class="actions">
+                <span ng-hide="vm.currentEdit[item.id]">
+                    <button class="btn btn-default" ng-click="vm.edit(item)">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger" ng-click="vm.delete(item)">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+
+                </span>
+                <span ng-show="vm.currentEdit[item.id]">
+                    <button class="btn btn-default" ng-click="vm.update(item)">
+                        <i class="fa fa-check"></i>
+                    </button>
+                    <button class="btn btn-primary" ng-click="vm.cancelEdit(item.id)">
+                        <i class="fa fa-mail-reply"></i>
+                    </button>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

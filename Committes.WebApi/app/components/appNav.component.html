@@ -1,0 +1,77 @@
+﻿<div class="navbar navbar-default navbar-fixed-top" ng-show="vm.isAuthorized">
+    <div class="container">
+        <div class="navbar-header">
+            <a ng-link="['HomePage']" ng-click="vm.resetMenu()"  class="navbar-brand">
+                <i class="fa fa-home fa-lg"></i>
+            </a>
+            <button class="navbar-toggle" ng-init="vm.navCollapsed = true" ng-click="vm.navCollapsed = !vm.navCollapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main" ng-class="{'in': !vm.navCollapsed}">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" ng-class="{'open': !vm.menu1}">
+                    <a class="dropdown-toggle" ng-init="vm.menu1 = true" ng-click="vm.menu1 = !vm.menu1" data-toggle="dropdown" href="" id="themes">البيانات الرئيسية <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="themes">
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Sectors']">القطاعات</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Jobs']">الوظائف الأساسية</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Roles']">الوظائف داخل اللجنة</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Specialities']">أسماء التخصصات</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Users']">مستخدمين النظام</a></li>
+                    </ul>
+                </li>
+                <li ng-click="vm.resetMenu()">
+                    <a ng-link="['CommitteesList']">اللجان</a>
+                </li>
+                <li ng-click="vm.resetMenu()">
+                    <a ng-link="['DefineCommitteeMembers']">
+                        تشكيل أعضاء اللجان
+                    </a>
+                </li>
+                <li class="dropdown" ng-class="{'open': !vm.menu2}">
+                    <a class="dropdown-toggle" ng-init="vm.menu2 = true" ng-click="vm.menu2 = !vm.menu2" data-toggle="dropdown" href="" id="themes">التقارير <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="themes">
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.Locations']">مقار اللجان</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.Stats']">أعداد أعضاء اللجان</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.Hafza']">الحافظة</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.Delivery']">تسليم وإستلام اللجان</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.DeliveryByDateReport']">تسليم وإستلام اللجان 2</a></li>
+                        <li ng-click="vm.resetMenu()"><a ng-link="['Reports.Type']">بيان نوعية مقار اللجان</a></li>
+                        <!--<li ng-click="vm.resetMenu()"><a href="#">مقار اللجان</a></li>-->
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a ng-link="['Settings']" ng-click="vm.resetMenu()">
+                        <i class="fa fa-gear"></i>
+                        الإعدادات
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" ng-click="vm.logout()">
+                        <i class="fa fa-sign-out"></i>
+                        خروج
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 51px; height: 100%" ng-click="vm.resetMenu()" >
+    <div>
+        <ng-outlet></ng-outlet>
+    </div>
+</div>
+
+

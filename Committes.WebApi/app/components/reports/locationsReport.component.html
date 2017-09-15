@@ -1,0 +1,81 @@
+﻿<div class="panel-body form-inline report-header">
+    <h1>تقرير مقار اللجان</h1>
+    <div class="form-group ">
+        <select class="form-control" ng-model="vm.model.selectedSector"
+                ng-options="option.title for option in vm.sectors track by option.id">
+            <option value="">---أختر القطاع---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedGov"
+                ng-options="option.title for option in vm.model.selectedSector.governrates  track by option.id">
+            <option value="">---أختر المحافظة---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="vm.loadReport()">
+            عرض
+            <i class="fa fa-search-plus"></i>
+        </button>
+    </div>
+</div>
+
+<div ng-show="vm.data.length > 0">
+    <a href="javascript:void(0)" onclick="javascript: window.print()" class="btn btn-default pull-left btn-print" style="margin-bottom: 10px;">
+        <i class="fa fa-print"></i>
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr class="report-header2">
+                <td colspan="6">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 25%; text-align: center;">
+                                <p>
+                                    وزارة التربية و التعليم والتعليم الفني
+                                    لجنة الإدارة المركزية للتعليم الفنى
+                                </p>
+                            </td>
+                            <td style="width: 50%; text-align: center;">
+                                يـــــــــــــــــــــــــــان <br />
+                                مقار لجان سير الإمتحان التحريرى <br />
+                                لدبلـوم المدارس الثـانوية الفنيـة الصناعيـة نظـام السـنوات الثـلاث
+
+                            </td>
+                            <td style="width: 25%">
+
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+
+                    <h1>تقرير مقار اللجان</h1>
+
+                </td>
+            </tr>
+            <tr>
+                <th>رقم اللجنة</th>
+                <th>مقر اللجنة</th>
+                <th>نوع اللجنة</th>
+                <th>عدد الطلبة</th>
+                <th>العنوان</th>
+                <th>التليفون</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vm.data">
+                <td>{{item.number}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.committeType}}</td>
+                <td>{{item.studentCount}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div><div class="alert alert-info" ng-show="vm.data.length == 0">
+        لا توجد لجان مسجلة للقطاع أو المحافظة المختارة
+    </div>
+

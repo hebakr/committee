@@ -1,0 +1,10 @@
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\Committes.Infrastructure.dll.config
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\Committes.Infrastructure.dll
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\Committes.Infrastructure.pdb
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\EntityFramework.dll
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\EntityFramework.xml
+E:\2016\Committes\Committes\Committes.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\2016\Committes\Committes\Committes.Infrastructure\obj\Debug\Committes.Infrastructure.dll
+E:\2016\Committes\Committes\Committes.Infrastructure\obj\Debug\Committes.Infrastructure.pdb
+E:\2016\Committes\Committes\Committes.Infrastructure\obj\Debug\Committes.Infrastructure.csprojResolveAssemblyReference.cache

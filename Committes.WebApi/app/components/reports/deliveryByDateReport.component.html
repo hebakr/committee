@@ -1,0 +1,113 @@
+﻿<h1>ميعاد تسليم وإستلام اللجان</h1>
+<hr />
+<div class="panel-body form-inline report-header">
+    <div class="form-group ">
+        <select class="form-control" ng-model="vm.model.selectedSector"
+                ng-options="option.title for option in vm.sectors track by option.id">
+            <option value="">---أختر القطاع---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedGov"
+                ng-options="option.title for option in vm.model.selectedSector.governrates  track by option.id">
+            <option value="">---أختر المحافظة---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedLM"
+                ng-options="option.title for option in vm.model.selectedGov.learningManagements  track by option.id">
+            <option value="">---أختر الإدارة التعليمية---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="vm.loadReport()">
+            عرض
+            <i class="fa fa-search-plus"></i>
+        </button>
+    </div>
+</div>
+<style>
+     .table-bordered>tbody>tr>td {
+        vertical-align: middle;
+    }
+</style>
+
+<div ng-show="vm.data">
+    <a href="javascript:void(0)" onclick="javascript: window.print()" class="btn btn-default pull-left btn-print" style="margin-bottom: 10px;">
+        <i class="fa fa-print"></i>
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr class="report-header2">
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 25%; text-align: center;">
+                                <p>
+                                    وزارة التربية و التعليم والتعليم الفني
+                                    لجنة الإدارة المركزية للتعليم الفنى
+                                </p>
+                            </td>
+                            <td style="width: 50%; text-align: center;">
+                                يـــــــــــــــــــــــــــان <br />
+                                ميعاد تسليم وإستلام لجان قطاع القاهرة "أ" <br />
+                                لدبلوم المدارس الثانوية الفنية الصناعية نظـام السـنوات الثـلاث 
+
+                            </td>
+                            <td style="width: 25%; text-align: left">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                </tr>
+            </thead>
+
+        <tbody>
+            <tr>
+
+                <td>
+                    <div ng-repeat="date in vm.data">
+                        <h3>{{date.key | date: 'yyyy-MM-dd'}}</h3>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>رقم اللجنة</th>
+                                <th>مقر اللجنة</th>
+                                <th>العمل داخل اللجنة</th>
+                                <th>الإسم </th>
+                                <th>الوظيفة</th>
+                                <th>الهاتف</th>
+                                <th class="visible-print">التوقيع</th>
+                            </tr>
+                            <tbody ng-repeat="item in date.schools">
+                                <tr>
+                                    <td rowspan="2">{{item.number}}</td>
+                                    <td rowspan="2">{{item.name}}</td>
+                                    <td>رئيس اللجنة</td>
+                                    <td>{{item.chiefName}}</td>
+                                    <td>{{item.chiefJob}}</td>
+                                    <td>{{item.chiefPhone}}</td>
+                                    <td class="visible-print"></td>
+                                </tr>
+                                <tr>
+                                    <td>المراقب الأول</td>
+                                    <td>{{item.superInspectorName}}</td>
+                                    <td>{{item.superInspectorJob}}</td>
+                                    <td>{{item.superInspectorPhone}}</td>
+                                    <td class="visible-print"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+<div class="alert alert-info" ng-show="!vm.data">
+    أختر القطاع او المحافظة او الإدارة التعليمية
+</div>

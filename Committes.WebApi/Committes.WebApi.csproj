@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC61FA7A-5463-410A-BB3A-E84A80360A16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Committes.WebApi</RootNamespace>
+    <AssemblyName>Committes.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/ca520502-66b1-422f-a5d2-f587d5409d9f/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/Committes.WebApi</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ioc.Modules, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ioc.Modules.1.1.0\lib\net45\Ioc.Modules.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi.WebHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.WebHost.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OwinFramework, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.Framework.2.1.0\lib\net45\OwinFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OwinFramework.StaticFiles, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.Framework.StaticFiles.2.1.2\lib\net45\OwinFramework.StaticFiles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>..\packages\WindowsBase.4.6.1055.0\lib\WindowsBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\CommitteesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SectorsController.cs" />
+    <Compile Include="Controllers\SpecialitiesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Mapper.cs" />
+    <Compile Include="Helpers\ReportGenerator.cs" />
+    <Compile Include="Helpers\Util.cs" />
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CommitteeVM.cs" />
+    <Compile Include="Models\CreateCommitteeViewModel.cs" />
+    <Compile Include="Models\FindCommitteesModel.cs" />
+    <Compile Include="Models\FindSchoolsViewModel.cs" />
+    <Compile Include="Models\JobDto.cs" />
+    <Compile Include="Models\LabViewModel.cs" />
+    <Compile Include="Models\MemberDto.cs" />
+    <Compile Include="Models\SaveInspectorViewModel.cs" />
+    <Compile Include="Models\Users\ResetPasswordVM.cs" />
+    <Compile Include="Models\Users\UserVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Test\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\component-template.txt" />
+    <Content Include="app\components\appNav.component.html" />
+    <Content Include="app\components\appNav.component.js" />
+    <Content Include="app\components\committee\committeeEditor.html" />
+    <Content Include="app\components\committee\committeeMembersEditor.html" />
+    <Content Include="app\components\committee\committeesList.component.html" />
+    <Content Include="app\components\committee\committeesList.component.js" />
+    <Content Include="app\components\committee\createCommittee.component.js" />
+    <Content Include="app\components\committee\defineCommittee.component.js" />
+    <Content Include="app\components\committee\defineCommitteeMembers.html" />
+    <Content Include="app\components\committee\editCommittee.component.js" />
+    <Content Include="app\components\committee\membersCommittee.component.js" />
+    <Content Include="app\components\committee\viewCommittee.component.js" />
+    <Content Include="app\components\committee\viewCommittee.html" />
+    <Content Include="app\components\governrates\governrates.component.html" />
+    <Content Include="app\components\governrates\governrates.component.js" />
+    <Content Include="app\components\home\home.component.js" />
+    <Content Include="app\components\home\home.component.html" />
+    <Content Include="app\components\jobs\jobs.component.html" />
+    <Content Include="app\components\jobs\jobs.component.js" />
+    <Content Include="app\components\login\login.html" />
+    <Content Include="app\components\reports\deliveryByDateReport.component.js" />
+    <Content Include="app\components\reports\deliveryByDateReport.component.html" />
+    <Content Include="app\components\reports\typeReport.component.html" />
+    <Content Include="app\components\reports\typeReport.component.js" />
+    <Content Include="app\components\reports\deliveryReport.component.js" />
+    <Content Include="app\components\reports\deliveryReport.component.html" />
+    <Content Include="app\components\reports\hafzaReport.component.html" />
+    <Content Include="app\components\reports\hafzaReport.component.js" />
+    <Content Include="app\components\reports\statsReport.component.html" />
+    <Content Include="app\components\reports\locationsReport.component.html" />
+    <Content Include="app\components\reports\stats.reports.component.js" />
+    <Content Include="app\components\reports\reports.component.js" />
+    <Content Include="app\components\roles\roles.component.html" />
+    <Content Include="app\components\roles\roles.component.js" />
+    <Content Include="app\components\schools\schools.component.html" />
+    <Content Include="app\components\schools\schools.component.js" />
+    <Content Include="app\components\schools\schools.modal.component.html" />
+    <Content Include="app\components\sectors\sectors.component.html" />
+    <Content Include="app\components\sectors\sectors.component.js" />
+    <Content Include="app\components\settings\settings.component.html" />
+    <Content Include="app\components\settings\settings.component.js" />
+    <Content Include="app\components\specialities\specialities.component.html" />
+    <Content Include="app\components\specialities\specialities.component.js" />
+    <Content Include="app\components\users\edit.users.modal.component.html" />
+    <Content Include="app\components\users\changePassword.modal.component.html" />
+    <Content Include="app\components\users\modals\changePassword.component.js" />
+    <Content Include="app\components\users\modals\editUser.component.js" />
+    <Content Include="app\components\users\modals\createUser.component.js" />
+    <Content Include="app\components\users\users.modal.component.html" />
+    <Content Include="app\components\users\users.component.html" />
+    <Content Include="app\components\users\users.component.js" />
+    <Content Include="app\components\workPlaces\workPlaces.component.html" />
+    <Content Include="app\components\workPlaces\workPlaces.component.js" />
+    <Content Include="app\services\Auth.js" />
+    <Content Include="app\services\committes.api.js" />
+    <Content Include="app\services\committesApi.js" />
+    <Content Include="app\services\reports.api.js" />
+    <Content Include="app\services\jobs.api.js" />
+    <Content Include="app\services\progress.js" />
+    <Content Include="app\services\roles.api.js" />
+    <Content Include="app\services\schools.api.js" />
+    <Content Include="app\services\sectors.api.js" />
+    <Content Include="app\services\specialities.api.js" />
+    <Content Include="app\services\users.api.js" />
+    <Content Include="app\services\workPlaces.api.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\AppSettings.json" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index2.html" />
+    <Content Include="index.html" />
+    <Content Include="Test\component.html" />
+    <Content Include="Test\component.js" />
+    <Content Include="Test\index.html" />
+    <Content Include="Test\WebForm1.aspx" />
+    <Content Include="_assets\css\bootstrap-rtl.css" />
+    <Content Include="_assets\css\bootstrap-rtl.min.css" />
+    <Content Include="_assets\css\bootstrap.cerulean.min.css" />
+    <Content Include="_assets\css\custom.css" />
+    <Content Include="_assets\css\fonts\JF-Flat-regular.svg" />
+    <Content Include="_assets\css\structure.css">
+      <DependentUpon>structure.less</DependentUpon>
+    </Content>
+    <Content Include="_assets\css\structure.min.css">
+      <DependentUpon>structure.css</DependentUpon>
+    </Content>
+    <Content Include="_assets\js\app.min.js" />
+    <Content Include="_assets\lib\angular-animate\angular-animate.js" />
+    <Content Include="_assets\lib\angular-animate\angular-animate.min.js" />
+    <Content Include="_assets\lib\angular-animate\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\Gruntfile.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\karma.conf.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\app.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\demo.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\favicon.ico" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\github-16px.png" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\header.png" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\img\glyphicons-halflings.png" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\plunker.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\rainbow-generic.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\rainbow-html.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\rainbow-javascript.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\rainbow.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\rainbow.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\smoothscroll-angular-custom.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\assets\uglifyjs.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\demo\index.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\raw-files-generator.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\test-lib\helpers.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\test-lib\jquery-1.8.2.min.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\validate-commit-msg.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\accordion.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\test\accordion.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\alert.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\test\alert.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\buttons.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\test\buttons.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\carousel.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\carousel.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\test\carousel.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\collapse.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\test\collapse.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\test\collapseHorizontally.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\dateparser.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\test\dateparser.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\popup.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\popup.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\test\popup.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\datepicker.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\datepicker.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\test\datepicker.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\debounce\debounce.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\debounce\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\debounce\test\debounce.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\dropdown.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\test\dropdown.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\isClass\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\isClass\isClass.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\isClass\test\isClass.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\modal.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\test\modal.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\test\multiMap.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\pager.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\test\pager.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\pagination.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\test\pagination.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\paging\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\paging\paging.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\paging\test\paging.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\popover.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\test\popover-html.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\test\popover-template.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\test\popover.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\position.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\position.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\test\position.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\test\test.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\progressbar.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\test\progressbar.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\rating.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\test\rating.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\stackedMap\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\stackedMap\stackedMap.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\stackedMap\test\stackedMap.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabindex\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabindex\tabindex.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabindex\test\tabindex.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\tabs.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\test\tabs.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\test\timepicker.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\timepicker.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\timepicker.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\test\tooltip-template.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\test\tooltip.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\test\tooltip2.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\tooltip.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\tooltip.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\docs\demo.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\docs\demo.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\index-nocss.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\index.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\test\typeahead-highlight-ngsanitize.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\test\typeahead-highlight.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\test\typeahead-parser.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\test\typeahead-popup.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\test\typeahead.spec.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\typeahead.css" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\typeahead.js" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\accordion\accordion-group.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\accordion\accordion.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\alert\alert.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\carousel\carousel.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\carousel\slide.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\datepickerPopup\popup.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\datepicker\datepicker.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\datepicker\day.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\datepicker\month.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\datepicker\year.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\modal\window.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\pager\pager.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\pagination\pagination.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\popover\popover-html.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\popover\popover-template.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\popover\popover.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\progressbar\bar.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\progressbar\progress.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\progressbar\progressbar.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\rating\rating.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\tabs\tab.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\tabs\tabset.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\timepicker\timepicker.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\tooltip\tooltip-html-popup.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\tooltip\tooltip-popup.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\tooltip\tooltip-template-popup.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\typeahead\typeahead-match.html" />
+    <Content Include="_assets\lib\angular-boostrap-ui\template\typeahead\typeahead-popup.html" />
+    <Content Include="_assets\lib\angular-bootstrap\index.js" />
+    <Content Include="_assets\lib\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="_assets\lib\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="_assets\lib\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="_assets\lib\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="_assets\lib\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="_assets\lib\angular-component-router\angular_1_router.js" />
+    <Content Include="_assets\lib\angular-component-router\ng_route_shim.js" />
+    <Content Include="_assets\lib\angular-resource\angular-resource.js" />
+    <Content Include="_assets\lib\angular-resource\angular-resource.min.js" />
+    <Content Include="_assets\lib\angular-resource\index.js" />
+    <Content Include="_assets\lib\angular-route\angular-route.js" />
+    <Content Include="_assets\lib\angular-route\angular-route.min.js" />
+    <Content Include="_assets\lib\angular-route\index.js" />
+    <Content Include="_assets\lib\angular\.bower.json" />
+    <Content Include="_assets\lib\angular\angular-csp.css" />
+    <Content Include="_assets\lib\angular\angular.js" />
+    <Content Include="_assets\lib\angular\angular.min.js" />
+    <Content Include="_assets\lib\angular\angular.min.js.gzip" />
+    <Content Include="_assets\lib\angular\angular.min.js.map" />
+    <Content Include="_assets\lib\angular\bower.json" />
+    <Content Include="_assets\lib\angular\index.js" />
+    <Content Include="_assets\lib\angular\LICENSE.md" />
+    <Content Include="_assets\lib\angular\package.json" />
+    <Content Include="_assets\lib\angular\README.md" />
+    <Content Include="_assets\lib\angular-animate\.bower.json" />
+    <Content Include="_assets\lib\angular-animate\angular-animate.min.js.map" />
+    <Content Include="_assets\lib\angular-animate\bower.json" />
+    <Content Include="_assets\lib\angular-animate\LICENSE.md" />
+    <Content Include="_assets\lib\angular-animate\package.json" />
+    <Content Include="_assets\lib\angular-animate\README.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.bower.json" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.editorconfig" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.eslintrc" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.gitattributes" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.gitignore" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.jshintrc" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.npmignore" />
+    <Content Include="_assets\lib\angular-boostrap-ui\.travis.yml" />
+    <Content Include="_assets\lib\angular-boostrap-ui\CHANGELOG.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\CODE_OF_CONDUCT.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\CONTRIBUTING.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\LICENSE" />
+    <Content Include="_assets\lib\angular-boostrap-ui\misc\changelog.tpl.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\package.json" />
+    <Content Include="_assets\lib\angular-boostrap-ui\README.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\accordion\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\alert\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\buttons\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\carousel\docs\README.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\collapse\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dateparser\docs\README.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepicker\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\datepickerPopup\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\dropdown\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\modal\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pager\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\pagination\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\popover\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\position\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\progressbar\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\rating\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tabs\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\timepicker\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\tooltip\docs\readme.md" />
+    <Content Include="_assets\lib\angular-boostrap-ui\src\typeahead\docs\readme.md" />
+    <Content Include="_assets\lib\angular-bootstrap\.bower.json" />
+    <Content Include="_assets\lib\angular-bootstrap\.gitignore" />
+    <Content Include="_assets\lib\angular-bootstrap\.npmignore" />
+    <Content Include="_assets\lib\angular-bootstrap\bower.json" />
+    <Content Include="_assets\lib\angular-bootstrap\package.json" />
+    <Content Include="_assets\lib\angular-bootstrap\README.md" />
+    <Content Include="_assets\lib\angular-component-router\.bower.json" />
+    <Content Include="_assets\lib\angular-component-router\bower.json" />
+    <Content Include="_assets\lib\angular-component-router\README.md" />
+    <Content Include="_assets\lib\angular-resource\.bower.json" />
+    <Content Include="_assets\lib\angular-resource\angular-resource.min.js.map" />
+    <Content Include="_assets\lib\angular-resource\bower.json" />
+    <Content Include="_assets\lib\angular-resource\LICENSE.md" />
+    <Content Include="_assets\lib\angular-resource\package.json" />
+    <Content Include="_assets\lib\angular-resource\README.md" />
+    <Content Include="_assets\lib\angular-route\.bower.json" />
+    <Content Include="_assets\lib\angular-route\angular-route.min.js.map" />
+    <Content Include="_assets\lib\angular-route\bower.json" />
+    <Content Include="_assets\lib\angular-route\LICENSE.md" />
+    <Content Include="_assets\lib\angular-route\package.json" />
+    <Content Include="_assets\lib\angular-route\README.md" />
+    <Content Include="_assets\lib\bootstrap\.bower.json" />
+    <Content Include="_assets\lib\bootstrap\bower.json" />
+    <Content Include="_assets\lib\bootstrap\CHANGELOG.md" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-rtl.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-rtl.min.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap.cerulean.min.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="_assets\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="_assets\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_assets\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_assets\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_assets\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_assets\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_assets\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="_assets\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="_assets\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="_assets\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_assets\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_assets\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_assets\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_assets\lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_assets\lib\bootstrap\Gemfile" />
+    <Content Include="_assets\lib\bootstrap\Gemfile.lock" />
+    <Content Include="_assets\lib\bootstrap\Gruntfile.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\.jshintrc" />
+    <Content Include="_assets\lib\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\change-version.js" />
+    <Content Include="_assets\lib\bootstrap\grunt\configBridge.json" />
+    <Content Include="_assets\lib\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="_assets\lib\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="_assets\lib\bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="_assets\lib\bootstrap\js\.jscsrc" />
+    <Content Include="_assets\lib\bootstrap\js\.jshintrc" />
+    <Content Include="_assets\lib\bootstrap\js\affix.js" />
+    <Content Include="_assets\lib\bootstrap\js\alert.js" />
+    <Content Include="_assets\lib\bootstrap\js\button.js" />
+    <Content Include="_assets\lib\bootstrap\js\carousel.js" />
+    <Content Include="_assets\lib\bootstrap\js\collapse.js" />
+    <Content Include="_assets\lib\bootstrap\js\dropdown.js" />
+    <Content Include="_assets\lib\bootstrap\js\modal.js" />
+    <Content Include="_assets\lib\bootstrap\js\popover.js" />
+    <Content Include="_assets\lib\bootstrap\js\scrollspy.js" />
+    <Content Include="_assets\lib\bootstrap\js\tab.js" />
+    <Content Include="_assets\lib\bootstrap\js\tooltip.js" />
+    <Content Include="_assets\lib\bootstrap\js\transition.js" />
+    <Content Include="_assets\lib\bootstrap\less\.csscomb.json" />
+    <Content Include="_assets\lib\bootstrap\less\.csslintrc" />
+    <Content Include="_assets\lib\bootstrap\less\alerts.less" />
+    <Content Include="_assets\lib\bootstrap\less\badges.less" />
+    <Content Include="_assets\lib\bootstrap\less\bootstrap.less" />
+    <Content Include="_assets\lib\bootstrap\less\breadcrumbs.less" />
+    <Content Include="_assets\lib\bootstrap\less\button-groups.less" />
+    <Content Include="_assets\lib\bootstrap\less\buttons.less" />
+    <Content Include="_assets\lib\bootstrap\less\carousel.less" />
+    <Content Include="_assets\lib\bootstrap\less\close.less" />
+    <Content Include="_assets\lib\bootstrap\less\code.less" />
+    <Content Include="_assets\lib\bootstrap\less\component-animations.less" />
+    <Content Include="_assets\lib\bootstrap\less\dropdowns.less" />
+    <Content Include="_assets\lib\bootstrap\less\forms.less" />
+    <Content Include="_assets\lib\bootstrap\less\glyphicons.less" />
+    <Content Include="_assets\lib\bootstrap\less\grid.less" />
+    <Content Include="_assets\lib\bootstrap\less\input-groups.less" />
+    <Content Include="_assets\lib\bootstrap\less\jumbotron.less" />
+    <Content Include="_assets\lib\bootstrap\less\labels.less" />
+    <Content Include="_assets\lib\bootstrap\less\list-group.less" />
+    <Content Include="_assets\lib\bootstrap\less\media.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\alerts.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\buttons.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\center-block.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\forms.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\gradients.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\grid.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\image.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\labels.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\list-group.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\opacity.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\pagination.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\panels.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\resize.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\size.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\table-row.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="_assets\lib\bootstrap\less\mixins.less" />
+    <Content Include="_assets\lib\bootstrap\less\modals.less" />
+    <Content Include="_assets\lib\bootstrap\less\navbar.less" />
+    <Content Include="_assets\lib\bootstrap\less\navs.less" />
+    <Content Include="_assets\lib\bootstrap\less\normalize.less" />
+    <Content Include="_assets\lib\bootstrap\less\pager.less" />
+    <Content Include="_assets\lib\bootstrap\less\pagination.less" />
+    <Content Include="_assets\lib\bootstrap\less\panels.less" />
+    <Content Include="_assets\lib\bootstrap\less\popovers.less" />
+    <Content Include="_assets\lib\bootstrap\less\print.less" />
+    <Content Include="_assets\lib\bootstrap\less\progress-bars.less" />
+    <Content Include="_assets\lib\bootstrap\less\responsive-embed.less" />
+    <Content Include="_assets\lib\bootstrap\less\responsive-utilities.less" />
+    <Content Include="_assets\lib\bootstrap\less\scaffolding.less" />
+    <Content Include="_assets\lib\bootstrap\less\tables.less" />
+    <Content Include="_assets\lib\bootstrap\less\theme.less" />
+    <Content Include="_assets\lib\bootstrap\less\thumbnails.less" />
+    <Content Include="_assets\lib\bootstrap\less\tooltip.less" />
+    <Content Include="_assets\lib\bootstrap\less\type.less" />
+    <Content Include="_assets\lib\bootstrap\less\utilities.less" />
+    <Content Include="_assets\lib\bootstrap\less\variables.less" />
+    <Content Include="_assets\lib\bootstrap\less\wells.less" />
+    <Content Include="_assets\lib\bootstrap\LICENSE" />
+    <Content Include="_assets\lib\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="_assets\lib\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="_assets\lib\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="_assets\lib\bootstrap\package.js" />
+    <Content Include="_assets\lib\bootstrap\package.json" />
+    <Content Include="_assets\lib\bootstrap\README.md" />
+    <Content Include="_assets\lib\chartist\dist\chartist.css" />
+    <Content Include="_assets\lib\chartist\dist\chartist.js" />
+    <Content Include="_assets\lib\chartist\dist\chartist.min.css" />
+    <Content Include="_assets\lib\chartist\dist\chartist.min.js" />
+    <Content Include="_assets\lib\font-awesome\.bower.json" />
+    <Content Include="_assets\lib\font-awesome\.gitignore" />
+    <Content Include="_assets\lib\font-awesome\.npmignore" />
+    <Content Include="_assets\lib\font-awesome\bower.json" />
+    <Content Include="_assets\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="_assets\lib\font-awesome\css\font-awesome.css.map" />
+    <Content Include="_assets\lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="_assets\lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="_assets\lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="_assets\lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_assets\lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="_assets\lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="_assets\lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="_assets\lib\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="_assets\lib\font-awesome\less\animated.less" />
+    <Content Include="_assets\lib\font-awesome\less\bordered-pulled.less" />
+    <Content Include="_assets\lib\font-awesome\less\core.less" />
+    <Content Include="_assets\lib\font-awesome\less\fixed-width.less" />
+    <Content Include="_assets\lib\font-awesome\less\font-awesome.less" />
+    <Content Include="_assets\lib\font-awesome\less\icons.less" />
+    <Content Include="_assets\lib\font-awesome\less\larger.less" />
+    <Content Include="_assets\lib\font-awesome\less\list.less" />
+    <Content Include="_assets\lib\font-awesome\less\mixins.less" />
+    <Content Include="_assets\lib\font-awesome\less\path.less" />
+    <Content Include="_assets\lib\font-awesome\less\rotated-flipped.less" />
+    <Content Include="_assets\lib\font-awesome\less\screen-reader.less" />
+    <Content Include="_assets\lib\font-awesome\less\stacked.less" />
+    <Content Include="_assets\lib\font-awesome\less\variables.less" />
+    <Content Include="_assets\lib\font-awesome\scss\_animated.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_core.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_icons.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_larger.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_list.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_mixins.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_path.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_stacked.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\_variables.scss" />
+    <Content Include="_assets\lib\font-awesome\scss\font-awesome.scss" />
+    <Content Include="_assets\lib\jquery\.bower.json" />
+    <Content Include="_assets\lib\jquery\AUTHORS.txt" />
+    <Content Include="_assets\lib\jquery\bower.json" />
+    <Content Include="_assets\lib\jquery\dist\core.js" />
+    <Content Include="_assets\lib\jquery\dist\jquery.js" />
+    <Content Include="_assets\lib\jquery\dist\jquery.min.js" />
+    <Content Include="_assets\lib\jquery\dist\jquery.min.map" />
+    <Content Include="_assets\lib\jquery\dist\jquery.slim.js" />
+    <Content Include="_assets\lib\jquery\dist\jquery.slim.min.js" />
+    <Content Include="_assets\lib\jquery\dist\jquery.slim.min.map" />
+    <Content Include="_assets\lib\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="_assets\lib\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="_assets\lib\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="_assets\lib\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="_assets\lib\jquery\LICENSE.txt" />
+    <Content Include="_assets\lib\jquery\README.md" />
+    <Content Include="_assets\lib\jquery\src\.eslintrc" />
+    <Content Include="_assets\lib\jquery\src\ajax.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\jsonp.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\load.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\parseXML.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\script.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\var\location.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\var\nonce.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\var\rquery.js" />
+    <Content Include="_assets\lib\jquery\src\ajax\xhr.js" />
+    <Content Include="_assets\lib\jquery\src\attributes.js" />
+    <Content Include="_assets\lib\jquery\src\attributes\attr.js" />
+    <Content Include="_assets\lib\jquery\src\attributes\classes.js" />
+    <Content Include="_assets\lib\jquery\src\attributes\prop.js" />
+    <Content Include="_assets\lib\jquery\src\attributes\support.js" />
+    <Content Include="_assets\lib\jquery\src\attributes\val.js" />
+    <Content Include="_assets\lib\jquery\src\callbacks.js" />
+    <Content Include="_assets\lib\jquery\src\core.js" />
+    <Content Include="_assets\lib\jquery\src\core\access.js" />
+    <Content Include="_assets\lib\jquery\src\core\DOMEval.js" />
+    <Content Include="_assets\lib\jquery\src\core\init.js" />
+    <Content Include="_assets\lib\jquery\src\core\parseHTML.js" />
+    <Content Include="_assets\lib\jquery\src\core\ready-no-deferred.js" />
+    <Content Include="_assets\lib\jquery\src\core\ready.js" />
+    <Content Include="_assets\lib\jquery\src\core\readyException.js" />
+    <Content Include="_assets\lib\jquery\src\core\support.js" />
+    <Content Include="_assets\lib\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="_assets\lib\jquery\src\css.js" />
+    <Content Include="_assets\lib\jquery\src\css\addGetHookIf.js" />
+    <Content Include="_assets\lib\jquery\src\css\adjustCSS.js" />
+    <Content Include="_assets\lib\jquery\src\css\curCSS.js" />
+    <Content Include="_assets\lib\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="_assets\lib\jquery\src\css\showHide.js" />
+    <Content Include="_assets\lib\jquery\src\css\support.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\cssExpand.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\getStyles.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\isHiddenWithinTree.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\rmargin.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="_assets\lib\jquery\src\css\var\swap.js" />
+    <Content Include="_assets\lib\jquery\src\data.js" />
+    <Content Include="_assets\lib\jquery\src\data\Data.js" />
+    <Content Include="_assets\lib\jquery\src\data\var\acceptData.js" />
+    <Content Include="_assets\lib\jquery\src\data\var\dataPriv.js" />
+    <Content Include="_assets\lib\jquery\src\data\var\dataUser.js" />
+    <Content Include="_assets\lib\jquery\src\deferred.js" />
+    <Content Include="_assets\lib\jquery\src\deferred\exceptionHook.js" />
+    <Content Include="_assets\lib\jquery\src\deprecated.js" />
+    <Content Include="_assets\lib\jquery\src\dimensions.js" />
+    <Content Include="_assets\lib\jquery\src\effects.js" />
+    <Content Include="_assets\lib\jquery\src\effects\animatedSelector.js" />
+    <Content Include="_assets\lib\jquery\src\effects\Tween.js" />
+    <Content Include="_assets\lib\jquery\src\event.js" />
+    <Content Include="_assets\lib\jquery\src\event\ajax.js" />
+    <Content Include="_assets\lib\jquery\src\event\alias.js" />
+    <Content Include="_assets\lib\jquery\src\event\focusin.js" />
+    <Content Include="_assets\lib\jquery\src\event\support.js" />
+    <Content Include="_assets\lib\jquery\src\event\trigger.js" />
+    <Content Include="_assets\lib\jquery\src\exports\amd.js" />
+    <Content Include="_assets\lib\jquery\src\exports\global.js" />
+    <Content Include="_assets\lib\jquery\src\jquery.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\buildFragment.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\getAll.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\setGlobalEval.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\support.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\var\rscriptType.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\var\rtagName.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\wrapMap.js" />
+    <Content Include="_assets\lib\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="_assets\lib\jquery\src\offset.js" />
+    <Content Include="_assets\lib\jquery\src\queue.js" />
+    <Content Include="_assets\lib\jquery\src\queue\delay.js" />
+    <Content Include="_assets\lib\jquery\src\selector-native.js" />
+    <Content Include="_assets\lib\jquery\src\selector-sizzle.js" />
+    <Content Include="_assets\lib\jquery\src\selector.js" />
+    <Content Include="_assets\lib\jquery\src\serialize.js" />
+    <Content Include="_assets\lib\jquery\src\traversing.js" />
+    <Content Include="_assets\lib\jquery\src\traversing\findFilter.js" />
+    <Content Include="_assets\lib\jquery\src\traversing\var\dir.js" />
+    <Content Include="_assets\lib\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="_assets\lib\jquery\src\traversing\var\siblings.js" />
+    <Content Include="_assets\lib\jquery\src\var\arr.js" />
+    <Content Include="_assets\lib\jquery\src\var\class2type.js" />
+    <Content Include="_assets\lib\jquery\src\var\concat.js" />
+    <Content Include="_assets\lib\jquery\src\var\document.js" />
+    <Content Include="_assets\lib\jquery\src\var\documentElement.js" />
+    <Content Include="_assets\lib\jquery\src\var\fnToString.js" />
+    <Content Include="_assets\lib\jquery\src\var\getProto.js" />
+    <Content Include="_assets\lib\jquery\src\var\hasOwn.js" />
+    <Content Include="_assets\lib\jquery\src\var\indexOf.js" />
+    <Content Include="_assets\lib\jquery\src\var\ObjectFunctionString.js" />
+    <Content Include="_assets\lib\jquery\src\var\pnum.js" />
+    <Content Include="_assets\lib\jquery\src\var\push.js" />
+    <Content Include="_assets\lib\jquery\src\var\rcssNum.js" />
+    <Content Include="_assets\lib\jquery\src\var\rnotwhite.js" />
+    <Content Include="_assets\lib\jquery\src\var\slice.js" />
+    <Content Include="_assets\lib\jquery\src\var\support.js" />
+    <Content Include="_assets\lib\jquery\src\var\toString.js" />
+    <Content Include="_assets\lib\jquery\src\wrap.js" />
+    <Content Include="_assets\lib\lodash\.bower.json" />
+    <Content Include="_assets\lib\lodash\.editorconfig" />
+    <Content Include="_assets\lib\lodash\.gitattributes" />
+    <Content Include="_assets\lib\lodash\.github\CONTRIBUTING.md" />
+    <Content Include="_assets\lib\lodash\.gitignore" />
+    <Content Include="_assets\lib\lodash\.jscsrc" />
+    <Content Include="_assets\lib\lodash\.markdown-doctest-setup.js" />
+    <Content Include="_assets\lib\lodash\.travis.yml" />
+    <Content Include="_assets\lib\lodash\dist\lodash.core.js" />
+    <Content Include="_assets\lib\lodash\dist\lodash.core.min.js" />
+    <Content Include="_assets\lib\lodash\dist\lodash.fp.js" />
+    <Content Include="_assets\lib\lodash\dist\lodash.fp.min.js" />
+    <Content Include="_assets\lib\lodash\dist\lodash.js" />
+    <Content Include="_assets\lib\lodash\dist\lodash.min.js" />
+    <Content Include="_assets\lib\lodash\dist\mapping.fp.js" />
+    <Content Include="_assets\lib\lodash\doc\README.md" />
+    <Content Include="_assets\lib\lodash\fp\placeholder.js" />
+    <Content Include="_assets\lib\lodash\fp\_baseConvert.js" />
+    <Content Include="_assets\lib\lodash\fp\_convertBrowser.js" />
+    <Content Include="_assets\lib\lodash\fp\_mapping.js" />
+    <Content Include="_assets\lib\lodash\lib\common\file.js" />
+    <Content Include="_assets\lib\lodash\lib\common\mapping.js" />
+    <Content Include="_assets\lib\lodash\lib\common\minify.js" />
+    <Content Include="_assets\lib\lodash\lib\common\uglify.options.js" />
+    <Content Include="_assets\lib\lodash\lib\common\util.js" />
+    <Content Include="_assets\lib\lodash\lib\fp\build-dist.js" />
+    <Content Include="_assets\lib\lodash\lib\fp\build-doc.js" />
+    <Content Include="_assets\lib\lodash\lib\fp\build-modules.js" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\doc\wiki.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\_falseOptions.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\_util.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\alias.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\category.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\convert.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\fp.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\module.jst" />
+    <Content Include="_assets\lib\lodash\lib\fp\template\modules\thru.jst" />
+    <Content Include="_assets\lib\lodash\lib\main\build-dist.js" />
+    <Content Include="_assets\lib\lodash\lib\main\build-doc.js" />
+    <Content Include="_assets\lib\lodash\lib\main\build-modules.js" />
+    <Content Include="_assets\lib\lodash\lib\main\build-site.js" />
+    <Content Include="_assets\lib\lodash\LICENSE" />
+    <Content Include="_assets\lib\lodash\lodash.js" />
+    <Content Include="_assets\lib\lodash\package.json" />
+    <Content Include="_assets\lib\lodash\perf\asset\perf-ui.js" />
+    <Content Include="_assets\lib\lodash\perf\index.html" />
+    <Content Include="_assets\lib\lodash\perf\perf.js" />
+    <Content Include="_assets\lib\lodash\README.md" />
+    <Content Include="_assets\lib\lodash\test\asset\test-ui.js" />
+    <Content Include="_assets\lib\lodash\test\asset\worker.js" />
+    <Content Include="_assets\lib\lodash\test\backbone.html" />
+    <Content Include="_assets\lib\lodash\test\fp.html" />
+    <Content Include="_assets\lib\lodash\test\index.html" />
+    <Content Include="_assets\lib\lodash\test\remove.js" />
+    <Content Include="_assets\lib\lodash\test\saucelabs.js" />
+    <Content Include="_assets\lib\lodash\test\test-fp.js" />
+    <Content Include="_assets\lib\lodash\test\test.js" />
+    <Content Include="_assets\lib\lodash\test\underscore.html" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\backbone.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\LICENSE" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\collection.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\events.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\model.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\noconflict.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\router.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\setup\dom-setup.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\setup\environment.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\sync.js" />
+    <Content Include="_assets\lib\lodash\vendor\backbone\test\view.js" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\license.txt" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\blank.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\buttonBg.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\buttonBgHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\debugger.css" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\detach.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\detachHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\disable.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\disable.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\disableHover.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\disableHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\down.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\downActive.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\downHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\errorIcon-sm.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\errorIcon.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\errorIcon.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\firebug-1.3a2.css" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\firebug.css" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\firebug.html" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\firebug.IE6.css" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\firebug.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\group.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\html.css" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\infoIcon.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\infoIcon.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\loading_16.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\min.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\minHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\off.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\offHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\pixel_transparent.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\roundCorner.svg" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\search.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\search.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\shadow.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\shadow2.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\shadowAlpha.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\sprite.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabHoverLeft.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabHoverMid.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabHoverRight.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabLeft.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMenuCheckbox.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMenuPin.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMenuRadio.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMenuTarget.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMenuTargetHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabMid.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tabRight.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\textEditorBorders.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\textEditorBorders.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\textEditorCorners.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\textEditorCorners.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\titlebarMid.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\toolbarMid.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tree_close.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\tree_open.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\twistyClosed.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\twistyOpen.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\up.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\upActive.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\upHover.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\warningIcon.gif" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\skin\xp\warningIcon.png" />
+    <Content Include="_assets\lib\lodash\vendor\firebug-lite\src\firebug-lite-debug.js" />
+    <Content Include="_assets\lib\lodash\vendor\json-js\json2.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\LICENSE" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\arrays.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\chaining.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\collections.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\cross-document.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\functions.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\objects.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\test\utility.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\underscore-min.js" />
+    <Content Include="_assets\lib\lodash\vendor\underscore\underscore.js" />
+    <Content Include="_assets\lib\ngprogress\.bower.json" />
+    <Content Include="_assets\lib\ngprogress\bower.json" />
+    <Content Include="_assets\lib\ngprogress\build\ngprogress.js" />
+    <Content Include="_assets\lib\ngprogress\build\ngprogress.min.js" />
+    <Content Include="_assets\lib\ngprogress\LICENSE" />
+    <Content Include="_assets\lib\ngprogress\ngProgress.css" />
+    <Content Include="_assets\lib\ngprogress\readme.md" />
+    <Content Include="_assets\lib\underscore\.bower.json" />
+    <Content Include="_assets\lib\underscore\bower.json" />
+    <Content Include="_assets\lib\underscore\LICENSE" />
+    <Content Include="_assets\lib\underscore\README.md" />
+    <Content Include="_assets\lib\underscore\underscore-min.js" />
+    <Content Include="_assets\lib\underscore\underscore-min.map" />
+    <Content Include="_assets\lib\underscore\underscore.js" />
+    <Content Include="app\components\login\login.component.js" />
+    <Content Include="Views\Home\DownloadAssignmentLetters.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\_Letter.cshtml" />
+    <Content Include="Views\Home\ComitteeStructure.cshtml" />
+    <Content Include="Views\Shared\_WordLayout.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
+    <Content Include="Views\Home\DownloadAssignmentLetterForMember.cshtml" />
+    <Content Include="bower.json" />
+    <Content Include=".bowerrc" />
+    <Content Include="_assets\lib\chartist\.bower.json" />
+    <Content Include="_assets\lib\chartist\bower.json" />
+    <Content Include="_assets\lib\chartist\CHANGELOG.md" />
+    <Content Include="_assets\lib\chartist\CODINGSTYLE.md" />
+    <Content Include="_assets\lib\chartist\CONTRIBUTING.md" />
+    <Content Include="_assets\lib\chartist\dist\chartist.css.map" />
+    <Content Include="_assets\lib\chartist\dist\chartist.min.js.map" />
+    <Content Include="_assets\lib\chartist\dist\scss\chartist.scss" />
+    <Content Include="_assets\lib\chartist\dist\scss\settings\_chartist-settings.scss" />
+    <Content Include="_assets\lib\chartist\LICENSE-MIT" />
+    <Content Include="_assets\lib\chartist\LICENSE-WTFPL" />
+    <Content Include="_assets\lib\chartist\README.md" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="_assets\css\fonts\.DS_Store" />
+    <Content Include="_assets\css\fonts\BarcodeFont.ttf" />
+    <Content Include="_assets\css\fonts\GE_SS_Two_Bold.otf" />
+    <Content Include="_assets\css\fonts\JF-Flat-regular.eot" />
+    <Content Include="_assets\css\fonts\JF-Flat-regular.ttf" />
+    <Content Include="_assets\css\fonts\JF-Flat-regular.woff" />
+    <None Include="_assets\css\structure.less" />
+    <None Include="_assets\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\reports\" />
+    <Folder Include="Models\Partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Committes.Infrastructure\Committes.Infrastructure.csproj">
+      <Project>{9f00d82c-2d50-4bb6-9c2e-2805911f56e8}</Project>
+      <Name>Committes.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Committes.Models\Committes.Models.csproj">
+      <Project>{dcc266e1-35ad-482f-8ea3-850d30c42eb1}</Project>
+      <Name>Committes.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Committes.Repositories\Committes.Repositories.csproj">
+      <Project>{84e3f7ba-21c7-4fbe-8fed-4696782a615a}</Project>
+      <Name>Committes.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Committes.Services\Committes.Services.csproj">
+      <Project>{abc9e16a-a728-4506-ba2c-5084fb3f68a7}</Project>
+      <Name>Committes.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Test\testReport.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64981</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64981/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,627 @@
+﻿<h2>تشكيل أعضاء اللجنة رقم {{vm.model.committee.number}}</h2>
+<hr />
+<div class="panel-body">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>القطاع</label>
+
+                <div>
+                    {{vm.model.committee.sector}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>المحافظة</label>
+                <div>
+                    {{vm.model.committee.governrate}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>الإدارة التعليمية</label>
+                <div>
+                    {{vm.model.committee.learningManagement}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>اللجنة</label>
+                <div>
+                    {{vm.model.committee.name}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>رقم اللجنة</label>
+                <div>
+                    {{vm.model.committee.number}}
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>عدد الطلبة</label>
+                <div>
+                    {{vm.model.committee.studentCount}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<uib-tabset active="active">
+    <uib-tab index="0" heading="Static title">
+
+        <uib-tab-heading>
+            <i class="fa fa-home"></i> البيانات الرئيسية
+        </uib-tab-heading>
+
+        <form name="frm" novalidate>
+            <div>
+
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">رئيس اللجنة</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>الإسم</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.chief.name" required />
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>الوظيفة</label>
+                                    <select class="form-control" ng-model="vm.model.committee.chief.jobObj"
+                                          ng-options="job.title for job in vm.model.jobs track by job.id"   required="required">
+                                        <option value="">---أختر الوظيفة---</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>تاريخ الإستلام</label>
+                                    <!--<input type="text" class="form-control" ng-model="vm.model.committee.chiefStartDate" />-->
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.model.committee.chiefStartDate" is-open="vm.popup1.opened" datepicker-options="vm.dateOptions" ng-required="true" close-text="Close" alt-input-formats="vm.altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="vm.popup1.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>تاريخ التسليم</label>
+                                    <!--<input type="text" class="form-control" ng-model="vm.model.committee.chiefEndDate" />-->
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.model.committee.chiefEndDate" is-open="vm.popup2.opened" datepicker-options="vm.dateOptions" ng-required="true" close-text="Close" alt-input-formats="vm.altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="vm.popup2.opened=true"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>مكان العمل الأساسى</label>
+                                    <select class="form-control" ng-model="vm.model.committee.chief.school"
+                                            ng-options="option.title for option in vm.model.schools track by option.id" required="required">
+                                        <option value="">---أختر مكان العمل---</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>تاريخ تقدير الدرجات</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.chief.evaluationDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>رقم تليفون رئيس اللجنة</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.chief.phone" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">المراقب الأول</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>الإسم</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.superInspector.name" required />
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>الوظيفة</label>
+                                    <select class="form-control" ng-model="vm.model.committee.superInspector.jobObj"
+                                            ng-options="option.title for option in vm.model.jobs track by option.id" required="required">
+                                        <option value="">---أختر الوظيفة---</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>مكان العمل الأساسى</label>
+                                    <select class="form-control" ng-model="vm.model.committee.superInspector.school"
+                                            ng-options="option.title for option in vm.model.schools track by option.id" required="required">
+                                        re
+                                        <option value="">---أختر مكان العمل---</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>رقم تليفون المراقب الأول</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.superInspector.phone" />
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
+                </div>
+
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">طبيب اللجنة</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>الإسم</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.doctorName" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>تاريخ العمل</label>
+                                    <input type="text" class="form-control" ng-model="vm.model.committee.doctorStartDate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p>
+                    <button class="btn btn-primary btn-lg" ng-disabled="frm.$invalid" ng-click="vm.submit()">
+                        <i class="fa fa-save fa-lg"></i>
+                        حفظ البيانات
+                    </button>
+                </p>
+            </div>
+        </form>
+
+
+    </uib-tab>
+    <uib-tab index="3" disable="vm.model.committee.id === 0">
+
+        <uib-tab-heading>
+            <i class="fa fa-search"></i>
+            المراقبون
+        </uib-tab-heading>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">المراقبون</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4 pull-left">
+                        <div class="form-group">
+                            <label>الإسم</label>
+                            <input type="text" class="form-control" ng-model="vm.model.inspectorEditor.name" />
+                        </div>
+                        <div class="form-group">
+                            <label>الوظيفة</label>
+                            <select class="form-control" ng-model="vm.model.inspectorEditor.jobId"
+                                    ng-options="option.id as option.title for option in vm.model.jobs " required="required">
+                                <option value="">---أختر الوظيفة---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>التخصص</label>
+                            <select class="form-control" ng-model="vm.model.inspectorEditor.specialityId"
+                                    ng-options="option.id as option.name for option in vm.model.specialities " required="required">
+                                <option value="">---أختر التخصص---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الوظيفة داخل اللجنة</label>
+                            <select class="form-control" ng-model="vm.model.inspectorEditor.committeRoleId"
+                                    ng-options="option.id as option.title for option in vm.model.committeRoles" required="required">
+                                <option value="">---أختر الوظيفة داخل اللجنة---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>جهة العمل </label>
+                            <select class="form-control" ng-model="vm.model.inspectorEditor.school.id"
+                                    ng-options="option.id as option.title for option in vm.model.schools" required="required">
+                                <option value="">---أختر جهة العمل---</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>تاريخ العمل</label>
+                            <input type="text" class="form-control" ng-model="vm.model.inspectorEditor.startDate" />
+                        </div>
+                        <div class="form-group">
+                            <label>تاريخ تقدير الدرجات</label>
+                            <input type="text" class="form-control" ng-model="vm.model.inspectorEditor.evaluationDate" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>تاريخ الإجتماع برئيس اللجنة</label>
+                            <input type="text" class="form-control" ng-model="vm.model.inspectorEditor.meetingDate" />
+                        </div>
+                        <p>
+                            <button class="btn btn-primary" ng-click="vm.saveInspector()">
+                                <i class="fa fa-save"></i>
+                                حفظ
+                            </button>
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="alert alert-info" ng-hide="vm.model.committee.inspectors.length">
+                            لم يتم تسجيل أى مراقبين لهذه اللجنة
+                        </div>
+                        <table class="table" ng-show="vm.model.committee.inspectors.length">
+                            <tr>
+                                <th>الإسم</th>
+                                <th>الوظيفة الأساسية</th>
+                                <th></th>
+                            </tr>
+                            <tr ng-repeat="item in vm.model.committee.inspectors">
+                                <td>{{item.name}}</td>
+                                <td>{{item.job.title}}</td>
+                                <td class="actions">
+                                    <button class="btn btn-default" ng-click="vm.editInspector(item)">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger" ng-click="vm.removeInspector(item)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </uib-tab>
+    <uib-tab index="4" disable="vm.model.committee.id === 0">
+
+        <uib-tab-heading>
+            <i class="fa fa-user-plus"></i>   المعاونون
+        </uib-tab-heading>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">المعاونون</div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4 pull-left">
+                            <div class="form-group">
+                                <label>الإسم</label>
+                                <input type="text" class="form-control" ng-model="vm.model.assistanceEditor.name" />
+                            </div>
+                            <div class="form-group">
+                                <label>الوظيفة</label>
+                                <select class="form-control" ng-model="vm.model.assistanceEditor.jobId"
+                                        ng-options="option.id as option.title for option in vm.model.jobs" required="required">
+                                    <option value="">---أختر الوظيفة---</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>التخصص</label>
+                                <select class="form-control" ng-model="vm.model.assistanceEditor.specialityId"
+                                        ng-options="option.id as option.name for option in vm.model.specialities" required="required">
+                                    <option value="">---أختر التخصص---</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>الوظيفة داخل اللجنة</label>
+                                <select class="form-control" ng-model="vm.model.assistanceEditor.committeRoleId"
+                                        ng-options="option.id as option.title for option in vm.model.committeRoles" required="required">
+                                    <option value="">---أختر الوظيفة داخل اللجنة---</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>جهة العمل </label>
+                                <select class="form-control" ng-model="vm.model.assistanceEditor.school.id"
+                                        ng-options="option.id as option.title for option in vm.model.schools" required="required">
+                                    <option value="">---أختر جهة العمل---</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>تاريخ العمل</label>
+                                <input type="text" class="form-control" ng-model="vm.model.assistanceEditor.startDate" />
+                            </div>
+                            <div class="form-group">
+                                <label>تاريخ تقدير الدرجات</label>
+                                <input type="text" class="form-control" ng-model="vm.model.assistanceEditor.evaluationDate" />
+                            </div>
+                            <div class="form-group">
+                                <label>تاريخ الإجتماع برئيس اللجنة</label>
+                                <input type="text" class="form-control" ng-model="vm.model.assistanceEditor.meetingDate" />
+                            </div>
+                            <p>
+                                <button class="btn btn-primary" ng-click="vm.saveAssistance()">
+                                    <i class="fa fa-save"></i>
+                                    حفظ
+                                </button>
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="alert alert-info" ng-hide="vm.model.committee.assistances.length">
+                                لم يتم تسجيل أى معاونين لهذه اللجنة
+                            </div>
+                            <table class="table" ng-show="vm.model.committee.assistances.length">
+                                <tr>
+                                    <th>الإسم</th>
+                                    <th>الوظيفة الأساسية</th>
+                                    <th></th>
+                                </tr>
+                                <tr ng-repeat="item in vm.model.committee.assistances">
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.job.title}}</td>
+                                    <td class="actions">
+                                        <button class="btn btn-default" ng-click="vm.editAssistance(item)">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-danger" ng-click="vm.removeAssistance(item)">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </uib-tab>
+
+    <uib-tab index="5" disable="vm.model.committee.id === 0">
+
+        <uib-tab-heading>
+            <i class="fa fa-question-circle-o"></i>  الممتحنون
+        </uib-tab-heading>
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">الممتحنون</div>
+            <div class="panel-body">
+                <div class="col-md-4 pull-left">
+                    <div class="form-group">
+                        <label>الإسم</label>
+                        <input type="text" class="form-control" ng-model="vm.model.examinorEditor.name" />
+                    </div>
+                    <div class="form-group">
+                        <label>الوظيفة</label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.jobId"
+                                ng-options="option.id as option.title for option in vm.model.jobs" required="required">
+                            <option value="">---أختر الوظيفة---</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>التخصص</label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.specialityId"
+                                ng-options="option.id as option.name for option in vm.model.specialities" required="required">
+                            <option value="">---أختر التخصص---</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الوظيفة داخل اللجنة</label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.committeRoleId"
+                                ng-options="option.id as option.title for option in vm.model.committeRoles" required="required">
+                            <option value="">---أختر الوظيفة داخل اللجنة---</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>جهة العمل </label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.school.id"
+                                ng-options="option.id as option.title for option in vm.model.schools" required="required">
+                            <option value="">---أختر جهة العمل---</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>تاريخ العمل</label>
+                        <input type="text" class="form-control" ng-model="vm.model.examinorEditor.startDate" />
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ تقدير الدرجات</label>
+                        <input type="text" class="form-control" ng-model="vm.model.examinorEditor.evaluationDate" />
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ الإجتماع برئيس اللجنة</label>
+                        <input type="text" class="form-control" ng-model="vm.model.examinorEditor.meetingDate" />
+                    </div>
+                   <div class="form-group">
+                        <label>
+                            <input type="checkbox" ng-model="vm.model.examinorEditor.theorotical" />
+                            إضافة إلى اللجان النظرى
+
+                        </label>
+
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ النظرى</label>
+                        <input type="text" class="form-control" ng-model="vm.model.examinorEditor.theoroticalDate" />
+                    </div>
+                    <div class="form-group">
+                        <label>المعمل</label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.committeeLabId"
+                                ng-options="option.id as option.title for option in vm.model.committee.labs">
+                            <option value="">---أختر المعمل---</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>القسم</label>
+                        <select class="form-control" ng-model="vm.model.examinorEditor.committeeDivisionId"
+                                ng-options="option.id as option.title for option in vm.model.committee.divisions">
+                            <option value="">---أختر القسم---</option>
+                        </select>
+                    </div>
+                    <p>
+                        <button class="btn btn-primary" ng-click="vm.saveExaminor()">
+                            <i class="fa fa-save"></i>
+                            حفظ
+                        </button>
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <div class="alert alert-info" ng-hide="vm.model.committee.examinors.length">
+                        لم يتم تسجيل أى ممتحنين لهذه اللجنة
+                    </div>
+                    <table class="table" ng-show="vm.model.committee.examinors.length">
+                        <tr>
+                            <th>الإسم</th>
+                            <th>الوظيفة الأساسية</th>
+                            <th></th>
+                        </tr>
+                        <tr ng-repeat="item in vm.model.committee.examinors">
+                            <td>{{item.name}}</td>
+                            <td>{{item.job.title}}</td>
+                            <td class="actions">
+                                <button class="btn btn-default" ng-click="vm.editExaminor(item)">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="btn btn-danger" ng-click="vm.removeExaminor(item)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </uib-tab>
+
+    <uib-tab index="6" disable="vm.model.committee.id === 0">
+
+        <uib-tab-heading>
+            <i class="fa fa-search"></i>
+             ملاحظون التحريري
+        </uib-tab-heading>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"> ملاحظون التحريري</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4 pull-left">
+                        <div class="form-group">
+                            <label>الإسم</label>
+                            <input type="text" class="form-control" ng-model="vm.model.observerEditor.name" />
+                        </div>
+                        <div class="form-group">
+                            <label>الوظيفة</label>
+                            <select class="form-control" ng-model="vm.model.observerEditor.jobId"
+                                    ng-options="option.id as option.title for option in vm.model.jobs " required="required">
+                                <option value="">---أختر الوظيفة---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>التخصص</label>
+                            <select class="form-control" ng-model="vm.model.observerEditor.specialityId"
+                                    ng-options="option.id as option.name for option in vm.model.specialities " required="required">
+                                <option value="">---أختر التخصص---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الوظيفة داخل اللجنة</label>
+                            <select class="form-control" ng-model="vm.model.observerEditor.committeRoleId"
+                                    ng-options="option.id as option.title for option in vm.model.committeRoles" required="required">
+                                <option value="">---أختر الوظيفة داخل اللجنة---</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>مكان العمل الأساسى</label>
+                            <select class="form-control" ng-model="vm.model.observerEditor.school.id"
+                                    ng-options="option.id as option.title for option in vm.model.schools" required="required">
+                                <option value="">---أختر مكان العمل---</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>تاريخ العمل</label>
+                            <input type="text" class="form-control" ng-model="vm.model.observerEditor.startDate" />
+                        </div>
+                        <div class="form-group">
+                            <label>تاريخ الإجتماع برئيس اللجنة</label>
+                            <input type="text" class="form-control" ng-model="vm.model.observerEditor.meetingDate" />
+                        </div>
+                       <p>
+                            <button class="btn btn-primary" ng-click="vm.saveObserver()">
+                                <i class="fa fa-save"></i>
+                                حفظ
+                            </button>
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="alert alert-info" ng-hide="vm.model.committee.observers.length">
+                            لم يتم تسجيل أى ملاحظون تحريري لهذه اللجنة
+                        </div>
+                        <table class="table" ng-show="vm.model.committee.observers.length">
+                            <tr>
+                                <th>الإسم</th>
+                                <th>الوظيفة الأساسية</th>
+                                <th></th>
+                            </tr>
+                            <tr ng-repeat="item in vm.model.committee.observers">
+                                <td>{{item.name}}</td>
+                                <td>{{item.job.title}}</td>
+                                <td class="actions">
+                                    <button class="btn btn-default" ng-click="vm.editObserver(item)">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger" ng-click="vm.removeObserver(item)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </uib-tab>
+
+
+</uib-tabset>
+
+
+
+
+

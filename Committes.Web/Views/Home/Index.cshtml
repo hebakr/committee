@@ -1,0 +1,60 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>نظام إدارة اللجان</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="_assets/lib/bootstrap/dist/css/bootstrap.cerulean.min.css" media="screen">
+    <link rel="stylesheet" href="_assets/lib/bootstrap/dist/css/bootstrap-rtl.min.css" media="screen">
+    <link href="~/_assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/_assets/css/custom.css" media="screen">
+</head>
+<body>
+    <div data-loading class="loading-data">
+        جارى تحميل البيانات
+        <i class="fa fa-spinner fa-spin fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <app-nav></app-nav>
+
+    <i class=""></i>
+    <script src="~/_assets/lib/lodash/dist/lodash.min.js"></script>
+    <script src="~/_assets/lib/angular/angular.min.js"></script>
+    <script src="~/_assets/lib/angular-resource/angular-resource.min.js"></script>
+    <script src="~/_assets/lib/angular-component-router/angular_1_router.js"></script>
+    <script src="~/_assets/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="~/app/app.js"></script>
+    <script src="~/app/services/committesApi.js"></script>
+    <script src="~/app/services/committes.api.js"></script>
+    <script src="~/app/services/sectors.api.js"></script>
+    <script src="~/app/services/specialities.api.js"></script>
+    <script src="~/app/services/jobs.api.js"></script>
+    <script src="~/app/services/roles.api.js"></script>
+    <script src="~/app/services/schools.api.js"></script>
+    <script src="~/app/services/workPlaces.api.js"></script>
+    <script src="~/app/components/sectors/sectors.component.js"></script>
+    <script src="~/app/components/governrates/governrates.component.js"></script>
+    <script src="~/app/components/specialities/specialities.component.js"></script>
+    <script src="~/app/components/jobs/jobs.component.js"></script>
+    <script src="~/app/components/roles/roles.component.js"></script>
+    <script src="~/app/components/schools/schools.component.js"></script>
+    <script src="~/app/components/workPlaces/workPlaces.component.js"></script>
+    <script src="~/app/components/committee/createCommittee.component.js"></script>
+    <script src="~/app/components/committee/editCommittee.component.js"></script>
+    <script src="~/app/components/committee/defineCommittee.component.js"></script>
+    <script src="~/app/components/committee/membersCommittee.component.js"></script>
+    <script src="~/app/components/settings/settings.component.js"></script>
+    <script src="~/app/components/committee/viewCommittee.component.js"></script>
+    <script src="~/app/components/committee/committeesList.component.js"></script>
+    <script src="~/app/components/appNav.component.js"></script>
+
+</body>
+</html>
+
+

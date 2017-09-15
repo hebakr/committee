@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnWVuHNaYzUCLqw/aeid1kQAAAAACAAAAAAAQZgAAAAEAACAAAADR+RyCPWBNQB67JP5+GGEhuJq1PQukTPkiTWHE8Bnd3QAAAAAOgAAAAAIAACAAAACdyhmva2ScJuATI06f2REW9GTVAt7GJRn5UzMwmr2tAyAAAAAc+eAPtm+1/qkHcq+SvvXl00FdFz9RYrnvvWZ7nU4NukAAAADWNdW4Wb4IOnC7cb0AMRYUWO4YXnd0SdQXVS9Gx6OLHrTtvJbLKC074rLR2XjCI+Te3qnwbKT6rBRakDgv5POq</EncryptedPassword>
+    <_PublishTargetUrl>ftp://committee.autoindex-eg.com/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".bowerrc">
+      <publishTime>09/06/2016 21:36:05</publishTime>
+    </File>
+    <File Include="app/app.js">
+      <publishTime>10/03/2016 07:05:54</publishTime>
+    </File>
+    <File Include="app/component-template.txt">
+      <publishTime>09/07/2016 02:33:00</publishTime>
+    </File>
+    <File Include="app/components/appNav.component.html">
+      <publishTime>10/03/2016 06:56:10</publishTime>
+    </File>
+    <File Include="app/components/appNav.component.js">
+      <publishTime>10/05/2016 06:34:52</publishTime>
+    </File>
+    <File Include="app/components/committee/committeeEditor.html">
+      <publishTime>10/05/2016 06:45:44</publishTime>
+    </File>
+    <File Include="app/components/committee/committeesList.component.html">
+      <publishTime>10/07/2016 20:49:42</publishTime>
+    </File>
+    <File Include="app/components/committee/committeesList.component.js">
+      <publishTime>10/07/2016 20:56:54</publishTime>
+    </File>
+    <File Include="app/components/committee/createCommittee.component.js">
+      <publishTime>10/03/2016 06:54:29</publishTime>
+    </File>
+    <File Include="app/components/committee/editCommittee.component.js">
+      <publishTime>10/05/2016 06:31:06</publishTime>
+    </File>
+    <File Include="app/components/committee/viewCommittee.component.js">
+      <publishTime>10/05/2016 06:31:13</publishTime>
+    </File>
+    <File Include="app/components/committee/viewCommittee.html">
+      <publishTime>10/07/2016 19:56:49</publishTime>
+    </File>
+    <File Include="app/components/governrates/governrates.component.html">
+      <publishTime>09/28/2016 01:14:55</publishTime>
+    </File>
+    <File Include="app/components/governrates/governrates.component.js">
+      <publishTime>09/07/2016 22:10:04</publishTime>
+    </File>
+    <File Include="app/components/jobs/jobs.component.html">
+      <publishTime>09/27/2016 21:29:45</publishTime>
+    </File>
+    <File Include="app/components/jobs/jobs.component.js">
+      <publishTime>09/28/2016 00:33:39</publishTime>
+    </File>
+    <File Include="app/components/roles/roles.component.html">
+      <publishTime>10/03/2016 07:30:51</publishTime>
+    </File>
+    <File Include="app/components/roles/roles.component.js">
+      <publishTime>09/28/2016 00:46:24</publishTime>
+    </File>
+    <File Include="app/components/schools/schools.component.html">
+      <publishTime>10/04/2016 19:44:07</publishTime>
+    </File>
+    <File Include="app/components/schools/schools.component.js">
+      <publishTime>10/03/2016 07:05:01</publishTime>
+    </File>
+    <File Include="app/components/sectors/old/sectors.component.html">
+      <publishTime>09/28/2016 01:16:24</publishTime>
+    </File>
+    <File Include="app/components/sectors/old/sectors.component.js">
+      <publishTime>09/28/2016 01:16:24</publishTime>
+    </File>
+    <File Include="app/components/sectors/sectors.component.html">
+      <publishTime>09/28/2016 05:51:25</publishTime>
+    </File>
+    <File Include="app/components/sectors/sectors.component.js">
+      <publishTime>09/28/2016 05:51:58</publishTime>
+    </File>
+    <File Include="app/components/specialities/specialities.component.html">
+      <publishTime>09/28/2016 01:13:31</publishTime>
+    </File>
+    <File Include="app/components/specialities/specialities.component.js">
+      <publishTime>09/27/2016 21:07:59</publishTime>
+    </File>
+    <File Include="app/services/committes.api.js">
+      <publishTime>10/07/2016 20:54:37</publishTime>
+    </File>
+    <File Include="app/services/committesApi.js">
+      <publishTime>09/07/2016 22:05:43</publishTime>
+    </File>
+    <File Include="app/services/jobs.api.js">
+      <publishTime>09/27/2016 21:27:28</publishTime>
+    </File>
+    <File Include="app/services/progress.js">
+      <publishTime>09/11/2016 01:28:01</publishTime>
+    </File>
+    <File Include="app/services/roles.api.js">
+      <publishTime>09/28/2016 00:37:50</publishTime>
+    </File>
+    <File Include="app/services/schools.api.js">
+      <publishTime>10/03/2016 07:03:50</publishTime>
+    </File>
+    <File Include="app/services/sectors.api.js">
+      <publishTime>09/28/2016 05:35:23</publishTime>
+    </File>
+    <File Include="app/services/specialities.api.js">
+      <publishTime>09/27/2016 21:17:18</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 07:43:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 07:43:40</publishTime>
+    </File>
+    <File Include="bin/Committes.Infrastructure.dll">
+      <publishTime>10/05/2016 05:34:32</publishTime>
+    </File>
+    <File Include="bin/Committes.Infrastructure.pdb">
+      <publishTime>10/05/2016 05:34:32</publishTime>
+    </File>
+    <File Include="bin/Committes.Models.dll">
+      <publishTime>10/05/2016 07:38:43</publishTime>
+    </File>
+    <File Include="bin/Committes.Models.pdb">
+      <publishTime>10/05/2016 07:38:43</publishTime>
+    </File>
+    <File Include="bin/Committes.Repositories.dll">
+      <publishTime>10/05/2016 07:55:08</publishTime>
+    </File>
+    <File Include="bin/Committes.Repositories.pdb">
+      <publishTime>10/05/2016 07:55:08</publishTime>
+    </File>
+    <File Include="bin/Committes.Services.dll">
+      <publishTime>10/05/2016 07:55:08</publishTime>
+    </File>
+    <File Include="bin/Committes.Services.pdb">
+      <publishTime>10/05/2016 07:55:08</publishTime>
+    </File>
+    <File Include="bin/Committes.Web.dll">
+      <publishTime>10/07/2016 21:03:05</publishTime>
+    </File>
+    <File Include="bin/Committes.Web.pdb">
+      <publishTime>10/07/2016 21:03:05</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/25/2016 23:08:17</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/25/2016 23:08:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 01:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/13/2015 12:16:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/13/2015 12:16:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/13/2015 12:16:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/13/2015 12:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/13/2015 12:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/13/2015 12:16:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 14:23:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>03/21/2014 16:14:40</publishTime>
+    </File>
+    <File Include="bin/Ninject.Extensions.Conventions.dll">
+      <publishTime>03/21/2014 16:47:04</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>03/21/2014 17:08:58</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Mvc.dll">
+      <publishTime>04/29/2014 02:35:10</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.WebApi.dll">
+      <publishTime>02/14/2015 10:54:04</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.WebApi.WebHost.dll">
+      <publishTime>02/14/2015 10:55:32</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/27/2012 12:00:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 19:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 19:19:46</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 03:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 03:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 03:03:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 03:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 14:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 03:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>03/29/2016 03:26:07</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 16:28:38</publishTime>
+    </File>
+    <File Include="bower.json">
+      <publishTime>09/28/2016 02:59:03</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>08/18/2016 00:23:50</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/18/2016 00:23:50</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/06/2016 22:20:38</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/07/2016 00:23:13</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>10/05/2016 06:44:18</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/DateTime.cshtml">
+      <publishTime>08/19/2016 06:54:33</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/Int32.cshtml">
+      <publishTime>08/19/2016 06:52:47</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/MultiLineText.cshtml">
+      <publishTime>08/19/2016 05:57:05</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/Object.cshtml">
+      <publishTime>08/19/2016 06:45:46</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/String.cshtml">
+      <publishTime>08/19/2016 05:46:54</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>08/18/2016 00:23:53</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/06/2016 23:59:35</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>08/18/2016 00:23:54</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/19/2016 06:15:20</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/18/2016 00:23:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/07/2016 21:03:11</publishTime>
+    </File>
+    <File Include="_assets/css/bootstrap-rtl.css">
+      <publishTime>09/06/2016 22:19:11</publishTime>
+    </File>
+    <File Include="_assets/css/bootstrap-rtl.min.css">
+      <publishTime>09/06/2016 22:19:11</publishTime>
+    </File>
+    <File Include="_assets/css/bootstrap.cerulean.min.css">
+      <publishTime>09/06/2016 22:18:58</publishTime>
+    </File>
+    <File Include="_assets/css/custom.css">
+      <publishTime>10/03/2016 07:29:13</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/.bower.json">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/angular-animate.js">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/angular-animate.min.js">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/angular-animate.min.js.map">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/bower.json">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/index.js">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/LICENSE.md">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/package.json">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-animate/README.md">
+      <publishTime>09/28/2016 02:59:11</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.bower.json">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.editorconfig">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.eslintrc">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.gitattributes">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.github/ISSUE_TEMPLATE.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.gitignore">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.jshintrc">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.npmignore">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/.travis.yml">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/CHANGELOG.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/CODE_OF_CONDUCT.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/CONTRIBUTING.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/Gruntfile.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/karma.conf.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/LICENSE">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/changelog.tpl.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/app.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/demo.css">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/favicon.ico">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/github-16px.png">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/header.png">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/img/glyphicons-halflings-white.png">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/img/glyphicons-halflings.png">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/plunker.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/rainbow-generic.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/rainbow-html.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/rainbow-javascript.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/rainbow.css">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/rainbow.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/smoothscroll-angular-custom.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/assets/uglifyjs.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/demo/index.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/raw-files-generator.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/test-lib/helpers.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/test-lib/jquery-1.8.2.min.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/misc/validate-commit-msg.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/package.json">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/README.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/accordion.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/accordion/test/accordion.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/alert.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/alert/test/alert.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/buttons.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/buttons/test/buttons.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/carousel.css">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/carousel.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/docs/README.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/index-nocss.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/carousel/test/carousel.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/collapse.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/test/collapse.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/collapse/test/collapseHorizontally.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/dateparser.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/docs/README.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dateparser/test/dateparser.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/datepicker.css">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/datepicker.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/index-nocss.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepicker/test/datepicker.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/index-nocss.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/popup.css">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/popup.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/datepickerPopup/test/popup.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/debounce/debounce.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/debounce/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/debounce/test/debounce.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/dropdown.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/index-nocss.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/dropdown/test/dropdown.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/isClass/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/isClass/isClass.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/isClass/test/isClass.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/index-nocss.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/modal.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/test/modal.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/modal/test/multiMap.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/pager.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pager/test/pager.spec.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/docs/demo.html">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/docs/demo.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/docs/readme.md">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/index.js">
+      <publishTime>09/06/2016 22:09:18</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/pagination.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/pagination/test/pagination.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/paging/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/paging/paging.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/paging/test/paging.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/index-nocss.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/popover.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/test/popover-html.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/test/popover-template.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/popover/test/popover.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/index-nocss.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/position.css">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/position.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/test/position.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/position/test/test.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/progressbar.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/progressbar/test/progressbar.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/rating.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/rating/test/rating.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/stackedMap/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/stackedMap/stackedMap.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/stackedMap/test/stackedMap.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabindex/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabindex/tabindex.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabindex/test/tabindex.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/tabs.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tabs/test/tabs.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/index-nocss.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/test/timepicker.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/timepicker.css">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/timepicker/timepicker.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/index-nocss.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/test/tooltip-template.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/test/tooltip.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/test/tooltip2.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/tooltip.css">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/tooltip/tooltip.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/docs/demo.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/docs/demo.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/docs/readme.md">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/index-nocss.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/index.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/test/typeahead-highlight-ngsanitize.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/test/typeahead-highlight.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/test/typeahead-parser.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/test/typeahead-popup.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/test/typeahead.spec.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/typeahead.css">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/src/typeahead/typeahead.js">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/accordion/accordion-group.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/accordion/accordion.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/alert/alert.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/carousel/carousel.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/carousel/slide.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/datepicker/datepicker.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/datepicker/day.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/datepicker/month.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/datepicker/year.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/datepickerPopup/popup.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/modal/window.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/pager/pager.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/pagination/pagination.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/popover/popover-html.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/popover/popover-template.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/popover/popover.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/progressbar/bar.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/progressbar/progress.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/progressbar/progressbar.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/rating/rating.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/tabs/tab.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/tabs/tabset.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/timepicker/timepicker.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/tooltip/tooltip-html-popup.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/tooltip/tooltip-popup.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/tooltip/tooltip-template-popup.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular-boostrap-ui/template/typeahead/typeahead-match.html">
+      <publishTime>09/06/2016 22:09:19</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/.bower.json">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/angular-csp.css">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/angular.js">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/angular.min.js">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/angular.min.js.gzip">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/angular.min.js.map">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/bower.json">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/index.js">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/LICENSE.md">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/package.json">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+    <File Include="_assets/lib/angular/README.md">
+      <publishTime>09/06/2016 22:11:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

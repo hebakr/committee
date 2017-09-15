@@ -1,0 +1,17 @@
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Committes.Tests.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Committes.Tests.pdb
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Castle.Core.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.Core.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Moq.dll
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Castle.Core.xml
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.pdb
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.xml
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.Core.pdb
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\FluentAssertions.Core.xml
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Moq.xml
+E:\2016\Committes\Committes\Committes.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\2016\Committes\Committes\Committes.Tests\obj\Debug\Committes.Tests.csprojResolveAssemblyReference.cache
+E:\2016\Committes\Committes\Committes.Tests\obj\Debug\Committes.Tests.dll
+E:\2016\Committes\Committes\Committes.Tests\obj\Debug\Committes.Tests.pdb

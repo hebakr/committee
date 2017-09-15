@@ -1,0 +1,52 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">بيانات المقر</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="form-group">
+        <label>القطاع</label>
+        <select class="form-control" ng-model="vm.model.selectedSector"
+                ng-options="option.title for option in vm.resolve.sectors track by option.id" >
+            <option value="">---أختر القطاع---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>المحافظة</label>
+        <select class="form-control" ng-model="vm.model.selectedGov"
+                ng-options="option.title for option in vm.model.selectedSector.governrates  track by option.id">
+            <option value="">---أختر المحافظة---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>الإدارة التعليمية</label>
+        <select class="form-control" ng-model="vm.model.selectedLM"
+                ng-options="option.title for option in vm.model.selectedGov.learningManagements  track by option.id">
+            <option value="">---أختر الإدارة التعليمية---</option>
+        </select>
+
+    </div>
+    <div class="form-group">
+        <label>اللجنة</label>
+        <input type="text" ng-model="vm.model.name" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label>رقم اللجنة</label>
+        <input type="text" ng-model="vm.model.number"  class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label>العنوان</label>
+        <input type="text" ng-model="vm.model.address" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label>رقم التليفون</label>
+        <input type="text" ng-model="vm.model.phone" class="form-control" />
+
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.ok()">  حفظ <i class="fa fa-save"></i></button>
+    <button class="btn btn-default" type="button" ng-click="vm.cancel()">إلغاء الأمر</button>
+</div>

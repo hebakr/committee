@@ -1,0 +1,36 @@
+﻿<form action="/" method="post" novalidate="novalidate" name="userForm">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">بيانات المستخدم</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="form-group">
+            <label>الإسم</label>
+            <input type="text" ng-model="vm.model.name" class="form-control" required />
+
+        </div>
+        <div class="form-group">
+            <label>اسم المستخدم</label>
+            <input type="text" ng-disabled="vm.model.id" ng-model="vm.model.userName" class="form-control" required />
+
+        </div>
+        <div class="form-group">
+            <label>البريد الإلكترونى</label>
+            <input type="email" ng-model="vm.model.email" class="form-control" required />
+
+        </div>
+        <div class="form-group">
+            <div>
+                <label>
+                    <input type="checkbox" ng-model="vm.model.isAdmin" />
+                    مدير النظام
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="vm.ok()" ng-disabled="userForm.$invalid">  حفظ <i class="fa fa-save"></i></button>
+        <button class="btn btn-default" type="button" ng-click="vm.cancel()">إلغاء الأمر</button>
+    </div>
+</form>

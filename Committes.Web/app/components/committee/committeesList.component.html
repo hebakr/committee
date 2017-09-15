@@ -1,0 +1,55 @@
+﻿<a ng-link="['CreateCommittee']" class="btn btn-default pull-left">
+    <i class="fa fa-plus"></i>
+    بناء لجنة جديدة
+</a>
+<h2>قائمة اللجان</h2>
+<hr />
+
+<div class="panel panel-primary form-inline">
+    <div class="panel-body">
+        <div class="form-group">
+            <input type="text" ng-model="vm.model.number" placeholder="رقم اللجنة" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.model.name" placeholder="اسم اللجنة" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" ng-click="vm.search()">
+                <i class="fa fa-search-plus"></i>
+                بحث
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <tr>
+        <th>الرقم</th>
+        <th>اسم اللجنة</th>
+        <th>الإدارة التعليمية</th>
+        <th>عدد الطلبة</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="c in vm.data">
+        <td>
+            {{c.number}}
+        </td>
+        <td>
+            <a ng-link="['ViewCommittee', {id: c.id}]">
+                {{c.name}}
+            </a>
+        </td>
+        <td>{{c.learningManagement }}</td>
+        <td>{{c.studentCount}}</td>
+        <td class="actions">
+            <a class="btn btn-default" title="تعديل" ng-link="['EditCommittee', {id: c.id}]">
+                <i class="fa fa-edit"></i>
+            </a>
+            <a class="btn btn-danger" title="حذف" ng-click="vm.remove(c)">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </td>
+    </tr>
+</table>

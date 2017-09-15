@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "_assets/css/bootswatch.css",
+    "inputFile": "_assets/css/bootswatch.less"
+  },
+  {
+    "outputFile": "_assets/css/variables.css",
+    "inputFile": "_assets/css/variables.less"
+  }
+]

@@ -1,0 +1,100 @@
+﻿<div class="panel-body form-inline report-header">
+    <h1>الحافظة</h1>
+    <hr />
+    <div class="form-group ">
+        <select class="form-control" ng-model="vm.model.selectedSector"
+                ng-options="option.title for option in vm.sectors track by option.id">
+            <option value="">---أختر القطاع---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedGov"
+                ng-options="option.title for option in vm.model.selectedSector.governrates  track by option.id">
+            <option value="">---أختر المحافظة---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedLM"
+                ng-options="option.title for option in vm.model.selectedGov.learningManagements  track by option.id">
+            <option value="">---أختر الإدارة التعليمية---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control" ng-model="vm.model.selectedSchool"
+                ng-options="option.title for option in vm.model.selectedLM.schools  track by option.id">
+            <option value="">---أختر المدرسة---</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="vm.loadReport()">
+            عرض
+            <i class="fa fa-search-plus"></i>
+        </button>
+    </div>
+</div>
+
+<div ng-show="vm.data">
+    <a href="javascript:void(0)" onclick="javascript: window.print()" class="btn btn-default pull-left btn-print" style="margin-bottom: 10px;">
+        <i class="fa fa-print"></i>
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr class="report-header2">
+                <td colspan="8">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 25%; text-align: center;">
+                                <p>
+                                    وزارة التربية و التعليم والتعليم الفني
+                                    لجنة الإدارة المركزية للتعليم الفنى
+                                </p>
+                            </td>
+                            <td style="width: 50%; text-align: center;">
+                                يـــــــــــــــــــــــــــان <br />
+                                بأسماء السادة المنتدبين لأعمال امتحانات دبلوم المدارس الثانوية الصناعية <br />
+                                 نظـام السـنوات الثـلاث / {{vm.data.sector}}
+
+                            </td>
+                            <td style="width: 25%; text-align: left">
+                                إستمارة رقم (3) عضوية
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">دور {{vm.data.term}} عام {{vm.data.schoolYear}} من مدرسة: {{vm.data.title}}</td>
+                            <td>الإدارة / {{vm.data.learningManagement}}</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <th>م</th>
+                <th>الاسـم</th>
+                <th>الوظيفة</th>
+                <th>العمــــل</th>
+                <th>مقر العمل</th>
+                <th>تاريخ بدء العمـل</th>
+                <th class="visible-print">التوقيع بالعلم</th>
+                <th class="visible-print">ملاحظات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vm.data.members">
+                <td>{{$index+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.job}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.committee}} - {{item.address}}</td>
+                <td>{{item.startDate}}</td>
+                <td class="visible-print"></td>
+                <td class="visible-print"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="alert alert-info" ng-show="!vm.data">
+    أختر المدرسة التى تريد عرض البيانات لها
+</div>
+

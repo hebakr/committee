@@ -1,0 +1,21 @@
+﻿(function (undefined) {
+
+    "use strict";
+
+    var app = angular.module('app');
+
+    var governratesCtrl = function () {
+        var vm = this;
+
+        vm.title = "governratesCtrl";
+    }
+
+    governratesCtrl.$inject = ['committesApi'];
+
+    app.component('governrates', {
+        templateUrl: '/app/components/governrates/governrates.component.html',
+        controller: governratesCtrl,
+        controllerAs: 'vm'
+    });
+
+})();

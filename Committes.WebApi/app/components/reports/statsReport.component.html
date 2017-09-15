@@ -1,0 +1,35 @@
+﻿<h1>بيان أعداد أعضاء اللجان</h1>
+<hr />
+
+
+<div ng-show="vm.data.length > 0"> 
+        <a href="javascript:void(0)" onclick="javascript: window.print()" class="btn btn-default pull-left btn-print" style="margin-bottom: 10px;">
+            <i class="fa fa-print"></i>
+        </a>
+
+    <table class="table table-bordered table-striped" >
+        <tr>
+            <th>المحافظة</th>
+            <th>عدد الطلبة</th>
+            <th>رئيس اللجنة</th>
+            <th>مراقب أول</th>
+            <th>عدد المراقبين</th>
+            <th>عدد المعاونين</th>
+            <th>عدد الملاحظين</th>
+            <th>طبيب اللجنة</th>
+        </tr>
+        <tr ng-repeat="item in vm.data">
+            <td>{{item.name}}</td>
+            <td>{{item.studentCount}}</td>
+            <td>{{item.chiefCount}}</td>
+            <td>{{item.superInspectorCount}}</td>
+            <td>{{item.inspectorsCount}}</td>
+            <td>{{item.assistancesCount}}</td>
+            <td>{{item.observersCount}}</td>
+            <td>{{item.doctorsCount}}</td>
+        </tr>
+    </table>
+</div><div class="alert alert-info" ng-show="vm.data.length == 0">
+    لا توجد بيانات مسجلة فى النظام
+</div>
+

@@ -1,0 +1,75 @@
+﻿<a ng-link="['CreateCommittee']" class="btn btn-default pull-left">
+    <i class="fa fa-plus"></i>
+    بناء لجنة جديدة
+</a>
+<h2>قائمة اللجان</h2>
+<hr />
+
+<div class="panel panel-primary form-inline">
+    <div class="panel-body">
+        <div class="form-group">
+            <input type="text" ng-model="vm.model.number" placeholder="رقم اللجنة" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.model.name" placeholder="اسم اللجنة" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" ng-click="vm.search()">
+                <i class="fa fa-search-plus"></i>
+                بحث
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <tr>
+        <th>الرقم</th>
+        <th>اسم اللجنة</th>
+        <th>الإدارة التعليمية</th>
+        <th>عدد الطلبة</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="c in vm.data">
+        <td>
+            {{c.number}}
+        </td>
+        <td>
+            <a ng-link="['ViewCommittee', {id: c.id}]">
+                {{c.name}}
+            </a>
+        </td>
+        <td>{{c.learningManagement }}</td>
+        <td>{{c.studentCount}}</td>
+        <td class="actions">
+            <div class="btn-group" uib-dropdown keyboard-nav>
+                <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                    <i class="fa fa-gear fa-lg"></i>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                    <li>
+                        <a class="" title="تعديل" ng-link="['EditCommittee', {id: c.id}]">
+                            <i class="fa fa-edit"></i> تعديل
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" title="حذف" ng-click="vm.remove(c)">
+                            <i class="fa fa-trash-o"></i> حذف
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" title="" href="/home/DownloadAssignmentLetters/{{c.id}}" target="print_frame">
+                            <i class="fa fa-print"></i> خطابات التكليف
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </td>
+    </tr>
+</table>
+
+<iframe src="" id="print_frame" name="print_frame" width="0" height="0" frameborder="0"></iframe>

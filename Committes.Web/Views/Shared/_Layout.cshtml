@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="_assets/lib/bootstrap/dist/css/bootstrap.cerulean.min.css" media="screen">
+    <link rel="stylesheet" href="_assets/lib/bootstrap/dist/css/bootstrap-rtl.min.css" media="screen">
+    <link rel="stylesheet" href="_assets/css/custom.css" media="screen">
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#/home" class="navbar-brand">نظام إدارة اللجان</a>
+                <button class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main" ng-class="{'in': !navCollapsed}">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"  ng-class="{'open': !menu1}" >
+                        <a class="dropdown-toggle" ng-init="menu1 = true"  ng-click="menu1 = !menu1"  data-toggle="dropdown" href="#" id="themes">البيانات الرئيسية <span class="caret"></span></a>
+                        <ul class="dropdown-menu"aria-labelledby="themes">
+                            <li ng-click="menu1 = !menu1"><a href="#/about">القطاعات</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#/list">المحافظات</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#">الوظائف الأساسية</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#">الإدارات التعليمية</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#">الوظائف داخل اللجنة</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#">أسماء التخصصات</a></li>
+                            <li ng-click="menu1 = !menu1"><a href="#">أسماء مقار لجان الإمتحان</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">اللجان</a>
+                    </li>
+                    <li>
+                        <a href="#">إنشاء لجنة جديدة</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">خروج</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 75px;">
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    Footer
+
+                </div>
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="~/_assets/lib/angular/angular.min.js"></script>
+    <script src="~/_assets/lib/angular-component-router/angular_1_router.js"></script>
+    <script src="~/_assets/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/app/components/navComponent.js"></script>
+    <script src="~/app/components/appAbout.js"></script>
+    <script src="~/app/app.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

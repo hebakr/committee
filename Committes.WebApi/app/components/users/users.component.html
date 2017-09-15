@@ -1,0 +1,42 @@
+﻿<h1>
+    مستخدمين النظام
+</h1>
+
+<hr />
+<div class="clearfix">
+    <button class="btn btn-primary pull-left" ng-click="vm.openDialogForCreate()">
+        <i class="fa fa-user-plus"></i> 
+        إضافة مستخدم جديد
+    </button>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>الإسم</th>
+        <th>البريد الإلكترونى</th>
+        <th>اسم المستخدم</th>
+        <th class="text-center">مدير النظام</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="user in vm.data">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.userName}}</td>
+        <td class="text-center">
+            <span class="fa fa-check-square-o" ng-show="user.isAdmin"></span>
+        </td>
+        <td class="actions">
+            <button class="btn btn-default" ng-click="vm.openDialogForChangePassword(user)">
+                <i class="glyphicon glyphicon-edit"></i> تغيير كلمة المرور
+            </button>
+            <button class="btn btn-default" ng-click="vm.openDialogForEdit(user)">
+                <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" ng-click="vm.delete(user)">
+                <i class="fa fa-trash-o"></i>
+            </button>
+
+        </td>
+    </tr>
+</table>
+

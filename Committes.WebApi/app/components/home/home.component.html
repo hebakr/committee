@@ -1,0 +1,64 @@
+﻿<h1>نظام إدارة اللجان </h1>
+<hr />
+<div class="row">
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-heading"> أخر اللجان المضافة</div>
+            <table class="table">
+                <tr>
+                    <th>الرقم</th>
+                    <th>اسم اللجنة</th>
+                    <th>الإدارة التعليمية</th>
+                    <th>عدد الطلبة</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="c in vm.data">
+                    <td>
+                        {{c.number}}
+                    </td>
+                    <td>
+                        <a ng-link="['ViewCommittee', {id: c.id}]">
+                            {{c.name}}
+                        </a>
+                    </td>
+                    <td>{{c.learningManagement }}</td>
+                    <td>{{c.studentCount}}</td>
+                    <td class="actions">
+                        <a class="btn btn-default" title="تعديل" ng-link="['EditCommittee', {id: c.id}]">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger" title="حذف" ng-click="vm.remove(c)">
+                            <i class="fa fa-trash-o"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">البيانات الرئيسية</div>
+            <!-- List group -->
+            <a class="list-group-item" ng-link="['Sectors']">القطاعات</a>
+            <a class="list-group-item" ng-link="['Jobs']">الوظائف الأساسية</a>
+            <a class="list-group-item" ng-link="['Roles']">الوظائف داخل اللجنة</a>
+            <a class="list-group-item" ng-link="['Specialities']">أسماء التخصصات</a>
+
+        </div>
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">التقارير</div>
+            <!-- List group -->
+            <a class="list-group-item" ng-link="['Reports.Locations']">مقار اللجان</a>
+            <a class="list-group-item" ng-link="['Reports.Stats']">أعداد أعضاء اللجان</a>
+            <a class="list-group-item" ng-link="['Reports.Hafza']">الحافظة</a></li>
+            <a class="list-group-item" ng-link="['Reports.Delivery']">تسليم وإستلام اللجان</a>
+            <a class="list-group-item" ng-link="['Reports.Type']">بيان نوعية مقار اللجان</a>
+
+
+        </div>
+
+    </div>
+</div>
